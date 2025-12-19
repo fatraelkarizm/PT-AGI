@@ -6,23 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const NAV_LINKS = [
-     { label: "Beranda", href: "/" },
-     { label: "Tentang Kami", href: "/about" },
-];
-
-const NAV_LINKS_RIGHT = [
-     { label: "FAQ", href: "/faq" },
-     { label: "Kontak", href: "/contact" },
-];
-
-const PROGRAMS = [
-     { label: "Fast Track to Career (FTTC)", href: "/programs/fttc" },
-     { label: "Professional Worker in Germany (PWIG)", href: "/programs/pwig" },
-     { label: "Studi Vokasi & Training Industri", href: "/programs/vokasi" },
-     { label: "Culture Exchange (USA, Belgia, China)", href: "/programs/exchange" },
-];
+import { NAV_LINKS, NAV_LINKS_RIGHT, PROGRAMS } from "@/constants/navbar";
 
 export default function Navbar() {
      const [isScrolled, setIsScrolled] = useState(false);
@@ -82,10 +66,14 @@ export default function Navbar() {
                               onMouseEnter={() => setProgramDropdownOpen(true)}
                               onMouseLeave={() => setProgramDropdownOpen(false)}
                          >
-                              <button className={cn("flex items-center gap-1 font-medium transition-colors hover:text-[#CD1E1A]", isScrolled ? "text-black" : "text-black")}>
-                                   Program
+                              <Link
+                                   href="/#programs-grid"
+                                   className={cn("flex items-center gap-1 font-medium transition-colors hover:text-[#CD1E1A]", isScrolled ? "text-black" : "text-black")}
+                                   onClick={() => setProgramDropdownOpen(false)}
+                              >
+                                   Program Kami
                                    <ChevronDown className="w-4 h-4" />
-                              </button>
+                              </Link>
                               <AnimatePresence>
                                    {programDropdownOpen && (
                                         <motion.div

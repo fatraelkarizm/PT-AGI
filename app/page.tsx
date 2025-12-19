@@ -1,16 +1,17 @@
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Programs from "@/components/Programs";
+import Expenses from "@/components/Expenses";
+import FaQ from "@/components/FaQ";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white font-sans text-gray-900">
-      <Navbar />
+    <main className="min-h-screen bg-gray-50 flex flex-col">
       <Hero />
       <Programs />
-      <div className="h-[50vh] bg-gray-50 flex items-center justify-center text-gray-400">
-        <p>Scroll down to see sticky navbar effect...</p>
-      </div>
+      <Expenses />
+      <FaQ />
+      <Contact />
     </main>
   );
 }

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 // Placeholder Partners (Can be replaced with real logos later)
@@ -44,28 +45,23 @@ const PROGRAMS = [
 
 export default function Programs() {
      return (
-          <section className="py-20 bg-white">
+          <section className=" bg-white">
                <div className="container mx-auto px-4 md:px-6">
 
                     {/* Business Partners */}
                     <div className="mb-24 text-center">
-                         <h3 className="text-sm font-bold tracking-widest text-[#CD1E1A] uppercase mb-8">
+                         <h3 className="text-xl font-bold tracking-widest text-[#CD1E1A] uppercase mb-8">
                               Didukung Oleh Mitra Terpercaya
                          </h3>
                          <div className="flex flex-wrap justify-center items-center gap-12 opacity-80 transition-all duration-500">
                               <Image src="/YAIJ-Logo.png" alt="YAIJ Logo" width={180} height={60} className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
                               <Image src="/LOGO_IAPA_Text.png" alt="IAPA Logo" width={180} height={60} className="h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
-                              {/* Placeholder for generic text if needed or repeats for visual balance */}
                               <Image src="/YAIJ-Foundation.jpg" alt="YAIJ Foundation Logo" width={180} height={60} className="h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
-
-                              <div className="text-xl font-bold text-gray-400 hover:text-gray-600 transition-colors">
-                                   YAIJ Group
-                              </div>
                          </div>
                     </div>
 
                     {/* At a Glance Section */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
+                    <div id="about-preview" className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24 scroll-mt-24">
                          <div className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl group">
                               <Image
                                    src="/AGI-LOGO.jpeg"
@@ -96,9 +92,9 @@ export default function Programs() {
                                         </li>
                                    ))}
                               </ul>
-                              <button className="flex items-center gap-2 text-[#CD1E1A] font-bold hover:gap-3 transition-all">
+                              <Link href="/about" className="inline-flex items-center gap-2 text-[#CD1E1A] font-bold hover:gap-3 transition-all">
                                    Pelajari Lebih Lanjut <ArrowRight size={18} />
-                              </button>
+                              </Link>
                          </div>
                     </div>
 
