@@ -8,18 +8,20 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-     { label: "Pembiayaan", href: "#pembiayaan" },
-     { label: "Tentang Kami", href: "#tentang-kami" },
-     { label: "Legalitas", href: "#legalitas" },
-     { label: "FAQ", href: "#faq" },
-     { label: "Kontak", href: "#kontak" },
+     { label: "Beranda", href: "/" },
+     { label: "Tentang Kami", href: "/about" },
+];
+
+const NAV_LINKS_RIGHT = [
+     { label: "FAQ", href: "/faq" },
+     { label: "Kontak", href: "/contact" },
 ];
 
 const PROGRAMS = [
-     { label: "Fast Track to Career (FTTC)", href: "#fttc" },
-     { label: "Professional Worker in Germany (PWIG)", href: "#pwig" },
-     { label: "Studi Vokasi & Training Industri", href: "#vokasi" },
-     { label: "Culture Exchange (USA, Belgia, China)", href: "#exchange" },
+     { label: "Fast Track to Career (FTTC)", href: "/programs/fttc" },
+     { label: "Professional Worker in Germany (PWIG)", href: "/programs/pwig" },
+     { label: "Studi Vokasi & Training Industri", href: "/programs/vokasi" },
+     { label: "Culture Exchange (USA, Belgia, China)", href: "/programs/exchange" },
 ];
 
 export default function Navbar() {
@@ -47,26 +49,40 @@ export default function Navbar() {
           >
                <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2">
+                    <Link href="/" className="flex items-center gap-2 ">
                          <Image
                               src="/pt-agi.png"
                               alt="PT AGI Logo"
-                              width={120} // Adjust based on aspect ratio
+                              width={120}
                               height={40}
-                              className="h-10 w-auto object-contain"
+                              className="h-10 w-auto object-contain border rounded-full"
                               priority
+
                          />
                     </Link>
 
                     {/* Desktop Menu */}
                     <div className="hidden lg:flex items-center gap-8">
+                         {NAV_LINKS.map((link) => (
+                              <Link
+                                   key={link.label}
+                                   href={link.href}
+                                   className={cn(
+                                        "font-medium transition-colors hover:text-[#CD1E1A]",
+                                        isScrolled ? "text-black" : "text-black"
+                                   )}
+                              >
+                                   {link.label}
+                              </Link>
+                         ))}
+
                          {/* Program Dropdown */}
                          <div
                               className="relative group"
                               onMouseEnter={() => setProgramDropdownOpen(true)}
                               onMouseLeave={() => setProgramDropdownOpen(false)}
                          >
-                              <button className={cn("flex items-center gap-1 font-medium transition-colors hover:text-[#CD1E1A]", isScrolled ? "text-gray-800" : "text-white")}>
+                              <button className={cn("flex items-center gap-1 font-medium transition-colors hover:text-[#CD1E1A]", isScrolled ? "text-black" : "text-black")}>
                                    Program
                                    <ChevronDown className="w-4 h-4" />
                               </button>
@@ -83,7 +99,7 @@ export default function Navbar() {
                                                   <Link
                                                        key={program.label}
                                                        href={program.href}
-                                                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#CD1E1A] transition-colors"
+                                                       className="block px-4 py-2 text-sm text-black hover:bg-gray-50 hover:text-[#CD1E1A] transition-colors"
                                                   >
                                                        {program.label}
                                                   </Link>
@@ -93,13 +109,13 @@ export default function Navbar() {
                               </AnimatePresence>
                          </div>
 
-                         {NAV_LINKS.map((link) => (
+                         {NAV_LINKS_RIGHT.map((link) => (
                               <Link
                                    key={link.label}
                                    href={link.href}
                                    className={cn(
                                         "font-medium transition-colors hover:text-[#CD1E1A]",
-                                        isScrolled ? "text-gray-800" : "text-white"
+                                        isScrolled ? "text-black" : "text-black"
                                    )}
                               >
                                    {link.label}
@@ -120,7 +136,7 @@ export default function Navbar() {
 
                     {/* Mobile Menu Toggle */}
                     <button
-                         className={cn("lg:hidden p-2 rounded-lg", isScrolled ? "text-gray-800" : "text-white")}
+                         className={cn("lg:hidden p-2 rounded-lg", isScrolled ? "text-black" : "text-black")}
                          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
                          {mobileMenuOpen ? <X /> : <Menu />}
@@ -137,25 +153,38 @@ export default function Navbar() {
                               className="lg:hidden bg-white border-t border-gray-100 overflow-hidden"
                          >
                               <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-                                   <div className="space-y-2">
-                                        <div className="font-semibold text-gray-900 px-2">Program</div>
+                                   {NAV_LINKS.map((link) => (
+                                        <Link
+                                             key={link.label}
+                                             href={link.href}
+                                             className="px-2 font-medium text-black hover:text-[#CD1E1A]"
+                                             onClick={() => setMobileMenuOpen(false)}
+                                        >
+                                             {link.label}
+                                        </Link>
+                                   ))}
+
+                                   <div className="space-y-2 pt-2 border-t border-gray-50">
+                                        <div className="font-semibold text-black px-2">Program</div>
                                         {PROGRAMS.map((program) => (
                                              <Link
                                                   key={program.label}
                                                   href={program.href}
-                                                  className="block px-4 py-2 text-sm text-gray-600 hover:text-[#CD1E1A] hover:bg-gray-50 rounded-lg"
+                                                  className="block px-4 py-2 text-sm text-black hover:text-[#CD1E1A] hover:bg-gray-50 rounded-lg"
                                                   onClick={() => setMobileMenuOpen(false)}
                                              >
                                                   {program.label}
                                              </Link>
                                         ))}
                                    </div>
+
                                    <div className="border-t border-gray-100 my-2"></div>
-                                   {NAV_LINKS.map((link) => (
+
+                                   {NAV_LINKS_RIGHT.map((link) => (
                                         <Link
                                              key={link.label}
                                              href={link.href}
-                                             className="px-2 font-medium text-gray-800 hover:text-[#CD1E1A]"
+                                             className="px-2 font-medium text-black hover:text-[#CD1E1A]"
                                              onClick={() => setMobileMenuOpen(false)}
                                         >
                                              {link.label}
