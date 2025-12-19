@@ -105,7 +105,7 @@ export default function Hero() {
                               </motion.div>
                          </motion.div>
 
-                         {/* Right Card - Red Folder Image */}
+                         {/* Right Card - Modern Profile Card */}
                          <motion.div
                               className="lg:col-span-5 lg:row-start-1 lg:row-end-3 relative h-[500px] lg:h-full w-full"
                               initial="hidden"
@@ -114,26 +114,70 @@ export default function Hero() {
                          >
                               <div className="relative w-full h-full">
 
-                                   {/* Main Background Card */}
-                                   <div className="absolute inset-0 bg-[#CD1E1A] rounded-4xl shadow-2xl overflow-hidden">
-                                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-                                        <div className="absolute inset-0 bg-linear-to-br from-white/10 to-black/10"></div>
+                                   {/* Main Background Card with Red Gradient */}
+                                   <div className="absolute inset-0 bg-gradient-to-br from-[#CD1E1A] via-[#a01815] to-[#CD1E1A] rounded-4xl shadow-2xl overflow-hidden">
+                                        {/* Dotted Pattern Overlay */}
+                                        <div className="absolute inset-0 opacity-20">
+                                             <svg width="100%" height="100%">
+                                                  <defs>
+                                                       <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                                                            <circle cx="2" cy="2" r="1.5" fill="white" />
+                                                       </pattern>
+                                                  </defs>
+                                                  <rect width="100%" height="100%" fill="url(#dots)" />
+                                             </svg>
+                                        </div>
 
-                                        {/* Floating Bubbles INSIDE text adjusted */}
-                                        <div className="absolute top-[20%] right-4 z-20 flex flex-col items-end gap-3">
+                                        {/* Accent Circles */}
+                                        <div className="absolute -top-10 -right-10 w-40 h-40 bg-white rounded-full opacity-10 blur-3xl"></div>
+                                        <div className="absolute bottom-20 -left-10 w-32 h-32 bg-black rounded-full opacity-10 blur-2xl"></div>
+
+                                        {/* Floating Stats Cards - Arc Pattern Above Head */}
+                                        <div className="absolute inset-0 z-20">
                                              {[
-                                                  { text: "1000+ Alumni", icon: CheckCircle, color: "bg-blue-50 text-blue-600" },
-                                                  { text: "Resmi Pemerintah", icon: Globe, color: "bg-green-50 text-green-600" },
-                                                  { text: "Bimbingan Intensif", icon: GraduationCap, color: "bg-orange-50 text-orange-600" }
+                                                  {
+                                                       text: "1000+ Profesional",
+                                                       value: "1000+",
+                                                       label: "Alumni",
+                                                       icon: CheckCircle,
+                                                       position: "top-[8%] right-[12%]"
+                                                  },
+                                                  {
+                                                       text: "Legalitas Terjamin",
+                                                       value: "100%",
+                                                       label: "Legal",
+                                                       icon: Globe,
+                                                       position: "top-[4%] left-[37.5%]"
+                                                  },
+                                                  {
+                                                       text: "4 Negara Tujuan",
+                                                       value: "4+",
+                                                       label: "Negara",
+                                                       icon: GraduationCap,
+                                                       position: "top-[8%] left-[12%]"
+                                                  }
                                              ].map((item, idx) => (
                                                   <motion.div
                                                        key={idx}
-                                                       initial={{ x: 50, opacity: 0 }}
-                                                       animate={{ x: 0, opacity: 1 }}
-                                                       transition={{ delay: 0.8 + (idx * 0.2), duration: 0.5 }}
-                                                       className={`px-4 py-2.5 rounded-xl shadow-lg border-2 border-white ${item.color} font-bold text-sm flex items-center gap-2 transform hover:scale-105 transition-transform cursor-default`}
+                                                       initial={{ y: -30, opacity: 0, scale: 0.8 }}
+                                                       animate={{ y: 0, opacity: 1, scale: 1 }}
+                                                       transition={{
+                                                            delay: 0.8 + (idx * 0.15),
+                                                            duration: 0.6,
+                                                            type: "spring",
+                                                            stiffness: 100
+                                                       }}
+                                                       className={`absolute ${item.position} bg-white/95 backdrop-blur-sm px-4 py-3 rounded-2xl shadow-xl border border-white/20 hover:scale-105 hover:-translate-y-1 transition-all cursor-default group`}
                                                   >
-                                                       <item.icon className="w-4 h-4" /> {item.text}
+                                                       <div className="flex items-center gap-3">
+                                                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#CD1E1A] to-[#a01815] flex items-center justify-center group-hover:scale-110 transition-transform">
+                                                                 <item.icon className="w-5 h-5 text-white" />
+                                                            </div>
+                                                            <div>
+                                                                 <p className="text-[#021231] font-bold text-base leading-none">{item.value}</p>
+                                                                 <p className="text-gray-500 text-xs font-medium mt-1">{item.label}</p>
+                                                            </div>
+                                                       </div>
                                                   </motion.div>
                                              ))}
                                         </div>
