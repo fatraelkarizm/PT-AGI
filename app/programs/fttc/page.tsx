@@ -1,12 +1,41 @@
-"use client";
-
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, CheckCircle, Clock, MapPin, DollarSign, Calendar } from "lucide-react";
+import StructuredData from "@/components/StructuredData";
+import { generateMetadata as generateSEOMetadata, generateCourseSchema, generateBreadcrumbSchema } from "@/lib/seo";
+import { Metadata } from "next";
+
+export const metadata: Metadata = generateSEOMetadata({
+     title: "Fast Track to Career (FTTC) - Program Karier Jerman",
+     description: "Program intensif 6-9 bulan untuk persiapan karier di Jerman. Pelatihan bahasa, budaya, dan kompetensi teknis dengan penempatan kerja terjamin.",
+     keywords: [
+          "fast track to career",
+          "fttc program",
+          "kerja di jerman",
+          "ausbildung jerman",
+          "program karier jerman",
+          "pelatihan bahasa jerman",
+     ],
+     canonical: "/programs/fttc",
+     ogImage: "/Nurse.jpg",
+});
 
 export default function FTTCPage() {
+     const schemas = [
+          generateCourseSchema({
+               name: "Fast Track to Career (FTTC)",
+               description: "Program intensif persiapan karier internasional di Jerman dengan fokus bahasa, budaya, dan kompetensi teknis.",
+               url: "/programs/fttc",
+          }),
+          generateBreadcrumbSchema([
+               { name: "Home", url: "/" },
+               { name: "Program", url: "/#programs-grid" },
+               { name: "Fast Track to Career", url: "/programs/fttc" },
+          ]),
+     ];
      return (
           <main className="min-h-screen bg-white font-sans pt-24 pb-12">
+               <StructuredData data={schemas} />
                <div className="container mx-auto px-4 md:px-6">
                     <motion.div
                          initial={{ opacity: 0, y: 20 }}
@@ -27,7 +56,7 @@ export default function FTTCPage() {
 
                          <div className="aspect-video relative rounded-3xl overflow-hidden shadow-2xl mb-12">
                               <Image
-                                   src="/pt-agi.png"
+                                   src="/Nurse.jpg"
                                    alt="FTTC Students"
                                    fill
                                    className="object-cover"

@@ -27,7 +27,7 @@ export default function CulturalExchangePage() {
 
                          <div className="aspect-video relative rounded-3xl overflow-hidden shadow-2xl mb-12">
                               <Image
-                                   src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop"
+                                   src="/Cultural-Exchange.jpg"
                                    alt="Cultural Exchange"
                                    fill
                                    className="object-cover"

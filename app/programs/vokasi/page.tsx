@@ -27,7 +27,7 @@ export default function VokasiPage() {
 
                          <div className="aspect-video relative rounded-3xl overflow-hidden shadow-2xl mb-12">
                               <Image
-                                   src="https://images.unsplash.com/photo-1515169067750-d51a73b530bb?q=80&w=1200&auto=format&fit=crop"
+                                   src="/hotel-pria.jpg"
                                    alt="Vocational Training"
                                    fill
                                    className="object-cover"

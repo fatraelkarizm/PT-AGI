@@ -27,7 +27,7 @@ export default function PWIGPage() {
 
                          <div className="aspect-video relative rounded-3xl overflow-hidden shadow-2xl mb-12">
                               <Image
-                                   src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop"
+                                   src="/team-doctor.jpg"
                                    alt="Professional Workers"
                                    fill
                                    className="object-cover"

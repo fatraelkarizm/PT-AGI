@@ -110,37 +110,38 @@ export default function Programs() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="programs-grid">
                          {PROGRAMS.map((program, idx) => (
-                              <motion.div
-                                   key={idx}
-                                   id={program.link.replace("#", "")}
-                                   whileHover={{ y: -10 }}
-                                   className="group relative bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden flex flex-col h-full scroll-mt-24"
-                              >
-                                   <div className="relative h-48 overflow-hidden">
-                                        <Image
-                                             src={program.image}
-                                             alt={program.title}
-                                             fill
-                                             className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                        />
-                                        <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-60"></div>
-                                        <div className="absolute bottom-4 left-4 right-4">
-                                             <h3 className="text-white font-bold text-lg leading-tight">{program.title}</h3>
-                                        </div>
-                                   </div>
-
-                                   <div className="p-6 flex flex-col grow">
-                                        <p className="text-sm text-gray-600 mb-6 grow line-clamp-3">
-                                             {program.description}
-                                        </p>
-                                        <div className="flex justify-between items-center mt-auto">
-                                             <span className="text-xs font-semibold text-[#021231] uppercase tracking-wider">Detail Program</span>
-                                             <div className="w-8 h-8 rounded-full bg-red-50 text-[#CD1E1A] flex items-center justify-center group-hover:bg-[#CD1E1A] group-hover:text-white transition-colors">
-                                                  <ArrowRight size={14} />
+                              <Link key={idx} href={program.link} className="block h-full">
+                                   <motion.div
+                                        id={program.link.replace("#", "")}
+                                        whileHover={{ y: -10 }}
+                                        className="group relative bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden flex flex-col h-full scroll-mt-24 cursor-pointer"
+                                   >
+                                        <div className="relative h-48 overflow-hidden">
+                                             <Image
+                                                  src={program.image}
+                                                  alt={program.title}
+                                                  fill
+                                                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                             />
+                                             <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-60"></div>
+                                             <div className="absolute bottom-4 left-4 right-4">
+                                                  <h3 className="text-white font-bold text-lg leading-tight">{program.title}</h3>
                                              </div>
                                         </div>
-                                   </div>
-                              </motion.div>
+
+                                        <div className="p-6 flex flex-col grow">
+                                             <p className="text-sm text-gray-600 mb-6 grow line-clamp-3">
+                                                  {program.description}
+                                             </p>
+                                             <div className="flex justify-between items-center mt-auto">
+                                                  <span className="text-xs font-semibold text-[#021231] uppercase tracking-wider">Detail Program</span>
+                                                  <div className="w-8 h-8 rounded-full bg-red-50 text-[#CD1E1A] flex items-center justify-center group-hover:bg-[#CD1E1A] group-hover:text-white transition-colors">
+                                                       <ArrowRight size={14} />
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </motion.div>
+                              </Link>
                          ))}
                     </div>
 
