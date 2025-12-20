@@ -35,7 +35,7 @@ export default function AboutContent() {
                                    <ul className="space-y-3">
                                         {[
                                              "Memberikan informasi yang jujur dan transparan.",
-                                             "Menyediakan pelatihan bahasa dan *soft skill* terbaik.",
+                                             "Menyediakan pelatihan bahasa dan soft skill terbaik.",
                                              "Menjalin kerjasama dengan mitra global yang kredibel.",
                                              "Mendampingi peserta dari persiapan hingga penempatan."
                                         ].map((item, i) => (

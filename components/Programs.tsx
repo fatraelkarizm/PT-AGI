@@ -54,9 +54,9 @@ export default function Programs() {
                               Didukung Oleh Mitra Terpercaya
                          </h3>
                          <div className="flex flex-wrap justify-center items-center gap-12 opacity-80 transition-all duration-500">
-                              <Image src="/YAIJ-Logo.png" alt="YAIJ Logo" width={180} height={60} className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
-                              <Image src="/LOGO_IAPA_Text.png" alt="IAPA Logo" width={180} height={60} className="h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
-                              <Image src="/YAIJ-Foundation.jpg" alt="YAIJ Foundation Logo" width={180} height={60} className="h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                              <Image src="/YAIJ-Logo.png" alt="YAIJ Logo" width={180} height={60} className="h-16 w-auto object-contain transition-all" />
+                              <Image src="/LOGO_IAPA_Text.png" alt="IAPA Logo" width={180} height={60} className="h-14 w-auto object-contain transition-all" />
+                              <Image src="/YAIJ-Foundation.jpg" alt="YAIJ Foundation Logo" width={180} height={60} className="h-14 w-auto  object-contain transition-all" />
                          </div>
                     </div>
 
