@@ -115,7 +115,7 @@ export default function Hero() {
                               <div className="relative w-full h-full">
 
                                    {/* Main Background Card with Red Gradient */}
-                                   <div className="absolute inset-0 bg-gradient-to-br from-[#CD1E1A] via-[#a01815] to-[#CD1E1A] rounded-4xl shadow-2xl overflow-hidden">
+                                   <div className="absolute inset-0 bg-linear-to-br from-[#CD1E1A] via-[#a01815] to-[#CD1E1A] rounded-4xl shadow-2xl overflow-hidden">
                                         {/* Dotted Pattern Overlay */}
                                         <div className="absolute inset-0 opacity-20">
                                              <svg width="100%" height="100%">
@@ -140,21 +140,21 @@ export default function Hero() {
                                                        value: "1000+",
                                                        label: "Alumni",
                                                        icon: CheckCircle,
-                                                       position: "top-[8%] right-[12%]"
+                                                       position: "top-[15%] right-[15%] sm:top-[15%] sm:right-[17%] md:top-[15%] md:right-[22%] lg:top-[10%] lg:right-[1%] xl:right-[11%]"
                                                   },
                                                   {
                                                        text: "Legalitas Terjamin",
                                                        value: "100%",
                                                        label: "Legal",
                                                        icon: Globe,
-                                                       position: "top-[4%] left-[37.5%]"
+                                                       position: "top-[4%] left-1/2 -translate-x-1/2"
                                                   },
                                                   {
                                                        text: "4 Negara Tujuan",
                                                        value: "4+",
                                                        label: "Negara",
                                                        icon: GraduationCap,
-                                                       position: "top-[8%] left-[12%]"
+                                                       position: "top-[15%] left-[15%] sm:top-[15%] sm:left-[17%] md:top-[15%] md:left-[22%] lg:top-[10%] lg:left-[2%] xl:left-[12%]"
                                                   }
                                              ].map((item, idx) => (
                                                   <motion.div
@@ -170,7 +170,7 @@ export default function Hero() {
                                                        className={`absolute ${item.position} bg-white/95 backdrop-blur-sm px-4 py-3 rounded-2xl shadow-xl border border-white/20 hover:scale-105 hover:-translate-y-1 transition-all cursor-default group`}
                                                   >
                                                        <div className="flex items-center gap-3">
-                                                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#CD1E1A] to-[#a01815] flex items-center justify-center group-hover:scale-110 transition-transform">
+                                                            <div className="w-10 h-10 rounded-xl bg-linear-to-br from-[#CD1E1A] to-[#a01815] flex items-center justify-center group-hover:scale-110 transition-transform">
                                                                  <item.icon className="w-5 h-5 text-white" />
                                                             </div>
                                                             <div>

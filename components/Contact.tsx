@@ -45,7 +45,7 @@ export default function Contact() {
                                         </div>
                                         <div>
                                              <h4 className="font-bold text-lg mb-1">Email</h4>
-                                             <p className="text-gray-400 group-hover:text-white transition-colors">info@pt-agi.com</p>
+                                             <p className="text-gray-400 group-hover:text-white transition-colors">ptakselerasiglobalindonesia@gmail.com</p>
                                         </div>
                                    </div>
 
@@ -55,7 +55,7 @@ export default function Contact() {
                                         </div>
                                         <div>
                                              <h4 className="font-bold text-lg mb-1">WhatsApp</h4>
-                                             <p className="text-gray-400 group-hover:text-white transition-colors">+62 812-3456-7890</p>
+                                             <p className="text-gray-400 group-hover:text-white transition-colors">+62 851-2979-1635</p>
                                         </div>
                                    </div>
                               </div>

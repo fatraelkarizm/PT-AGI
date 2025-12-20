@@ -9,7 +9,7 @@ Allow: /
 # Disallow: /private/
 
 # Sitemap location
-Sitemap: https://ptagi.com/sitemap.xml
+Sitemap: https://agiindonesia.id/sitemap.xml
 
 # Crawl-delay (optional, adjust if needed)
 Crawl-delay: 1
