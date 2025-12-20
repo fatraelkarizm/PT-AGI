@@ -35,7 +35,7 @@ export default function Navbar() {
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 ">
                          <Image
-                              src="/pt-agi.png"
+                              src="/AGI-LOGO.jpeg"
                               alt="PT AGI Logo"
                               width={120}
                               height={40}

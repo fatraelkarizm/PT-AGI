@@ -18,7 +18,7 @@ const SITE_CONFIG = {
      shortName: "PT AGI",
      description: "Mitra resmi karier internasional Indonesia. Program studi dan kerja legal ke Jerman, USA, Belgia, dan China.",
      url: process.env.NEXT_PUBLIC_SITE_URL || "https://agiindonesia.id",
-     logo: "/pt-agi.png",
+     logo: "/AGI-LOGO.jpeg",
      ogImage: "/og-image.jpg",
      twitterHandle: "@ptagi_official",
      locale: "id_ID",
@@ -116,9 +116,9 @@ export function generateMetadata({
                },
           },
           icons: {
-               icon: "/favicon.ico",
-               shortcut: "/favicon-16x16.png",
-               apple: "/apple-touch-icon.png",
+               icon: "/AGI-LOGO.jpeg",
+               shortcut: "/AGI-LOGO.jpeg",
+               apple: "/AGI-LOGO.jpeg",
           },
           manifest: "/site.webmanifest",
           verification: {
