@@ -54,10 +54,16 @@ export default function PWIGContent() {
 
                          <div className="prose prose-lg max-w-none text-gray-700">
                               <h2 className="text-2xl font-bold text-[#021231] mb-4">Deskripsi Program</h2>
-                              <p className="mb-6">
-                                   PWIG ditujukan bagi perawat (Nurses), insinyur (Engineers), dan spesialis IT yang sudah memiliki pengalaman kerja. Kami memfasilitasi penyetaraan
-                                   ijazah (Anerkennung), kursus bahasa hingga level B2/C1, dan wawancara langsung dengan *employer* Jerman.
+                              <p className="mb-4">
+                                   PWIG membuka peluang bagi tenaga kesehatan berpengalaman untuk berkarier di Jerman melalui jalur penyetaraan ijazah (Anerkennung).
                               </p>
+                              <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+                                   <p className="font-bold text-blue-900 mb-2">Target Peserta:</p>
+                                   <ul className="list-disc list-inside text-blue-800 space-y-1">
+                                        <li>Alumni STIKES / Keperawatan (D3 / S1)</li>
+                                        <li>Perawat Berpengalaman (Professional Nurse)</li>
+                                   </ul>
+                              </div>
 
                               <h2 className="text-2xl font-bold text-[#021231] mb-4">Sektor Pekerjaan Utama</h2>
                               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0 mb-8">

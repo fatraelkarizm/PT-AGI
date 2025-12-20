@@ -31,10 +31,9 @@ export default function Contact() {
                                              <MapPin className="w-6 h-6 text-white" />
                                         </div>
                                         <div>
-                                             <h4 className="font-bold text-lg mb-1">Kantor Pusat</h4>
+                                             <h3 className="font-bold text-lg mb-1">Kantor Pusat</h3>
                                              <p className="text-gray-400 group-hover:text-white transition-colors">
-                                                  Jl. Contoh Raya No. 123, Jakarta Selatan,<br />
-                                                  Indonesia 12345
+                                                 Jl. Gajah No 83, Cimahi Selatan, Bandung 40531<br />
                                              </p>
                                         </div>
                                    </div>
@@ -44,7 +43,7 @@ export default function Contact() {
                                              <Mail className="w-6 h-6 text-white" />
                                         </div>
                                         <div>
-                                             <h4 className="font-bold text-lg mb-1">Email</h4>
+                                             <h3 className="font-bold text-lg mb-1">Email</h3>
                                              <p className="text-gray-400 group-hover:text-white transition-colors">ptakselerasiglobalindonesia@gmail.com</p>
                                         </div>
                                    </div>
@@ -54,7 +53,7 @@ export default function Contact() {
                                              <Phone className="w-6 h-6 text-white" />
                                         </div>
                                         <div>
-                                             <h4 className="font-bold text-lg mb-1">WhatsApp</h4>
+                                             <h3 className="font-bold text-lg mb-1">WhatsApp</h3>
                                              <p className="text-gray-400 group-hover:text-white transition-colors">+62 851-2979-1635</p>
                                         </div>
                                    </div>

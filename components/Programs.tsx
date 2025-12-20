@@ -50,9 +50,9 @@ export default function Programs() {
 
                     {/* Business Partners */}
                     <div className="mb-24 text-center">
-                         <h3 className="text-xl font-bold tracking-widest text-[#CD1E1A] uppercase mb-8">
+                         <h1 className="text-xl font-bold tracking-widest text-[#CD1E1A] uppercase mb-8">
                               Didukung Oleh Mitra Terpercaya
-                         </h3>
+                         </h1>
                          <div className="flex flex-wrap justify-center items-center gap-12 opacity-80 transition-all duration-500">
                               <Image src="/YAIJ-Logo.png" alt="YAIJ Logo" width={180} height={60} className="h-16 w-auto object-contain transition-all" />
                               <Image src="/LOGO_IAPA_Text.png" alt="IAPA Logo" width={180} height={60} className="h-14 w-auto object-contain transition-all" />

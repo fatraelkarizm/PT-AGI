@@ -46,7 +46,7 @@ export default function Hero() {
      };
 
      return (
-          <section id="home" className="relative w-full min-h-screen flex items-center bg-[#ffffff] overflow-hidden pt-8 pb-12 lg:pt-8 lg:pb-0">
+          <section id="home" className="relative w-full min-h-screen flex items-center bg-[#ffffff] overflow-hidden pt-16 pb-12 lg:pt-8 lg:pb-0">
                <div className="container mx-auto px-4 md:px-6 relative z-10 h-full">
                     <div className="grid grid-cols-1 lg:grid-cols-12 lg:grid-rows-[1fr_auto] gap-4 mx-auto max-w-7xl h-auto lg:h-[80vh] items-stretch">
 
@@ -167,15 +167,15 @@ export default function Hero() {
                                                             type: "spring",
                                                             stiffness: 100
                                                        }}
-                                                       className={`absolute ${item.position} bg-white/95 backdrop-blur-sm px-4 py-3 rounded-2xl shadow-xl border border-white/20 hover:scale-105 hover:-translate-y-1 transition-all cursor-default group`}
+                                                       className={`absolute ${item.position} bg-white/95 backdrop-blur-sm px-3 py-2 md:px-4 md:py-3 rounded-xl md:rounded-2xl shadow-xl border border-white/20 hover:scale-105 hover:-translate-y-1 transition-all cursor-default group`}
                                                   >
-                                                       <div className="flex items-center gap-3">
-                                                            <div className="w-10 h-10 rounded-xl bg-linear-to-br from-[#CD1E1A] to-[#a01815] flex items-center justify-center group-hover:scale-110 transition-transform">
-                                                                 <item.icon className="w-5 h-5 text-white" />
+                                                       <div className="flex items-center gap-2 md:gap-3">
+                                                            <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-linear-to-br from-[#CD1E1A] to-[#a01815] flex items-center justify-center group-hover:scale-110 transition-transform">
+                                                                 <item.icon className="w-4 h-4 md:w-5 md:h-5 text-white" />
                                                             </div>
                                                             <div>
-                                                                 <p className="text-[#021231] font-bold text-base leading-none">{item.value}</p>
-                                                                 <p className="text-gray-500 text-xs font-medium mt-1">{item.label}</p>
+                                                                 <p className="text-[#021231] font-bold text-sm md:text-base leading-none">{item.value}</p>
+                                                                 <p className="text-gray-500 text-[10px] md:text-xs font-medium mt-0.5 md:mt-1">{item.label}</p>
                                                             </div>
                                                        </div>
                                                   </motion.div>
@@ -201,20 +201,20 @@ export default function Hero() {
                          <div className="lg:col-span-7 lg:row-start-2 grid grid-cols-1 gap-3 h-fit">
                               {/* Card 1: Flags */}
                               <motion.div
-                                   className="bg-gray-50 rounded-4xl p-5 flex items-center justify-between border border-gray-100 min-h-[100px]"
+                                   className="bg-gray-50 rounded-4xl p-4 md:p-5 flex items-center justify-between border border-gray-100 min-h-[80px] md:min-h-[100px]"
                                    initial={{ opacity: 0, y: 20 }}
                                    animate={{ opacity: 1, y: 0 }}
                                    transition={{ delay: 0.6 }}
                               >
-                                   <p className="text-gray-500 text-lg font-bold whitespace-nowrap mr-4">Negara Tujuan</p>
-                                   <div className="flex items-center gap-3 overflow-x-auto no-scrollbar py-1">
+                                   <p className="text-gray-500 text-sm md:text-lg font-bold whitespace-nowrap mr-2 md:mr-4">Negara Tujuan</p>
+                                   <div className="flex items-center gap-2 md:gap-3 overflow-x-auto no-scrollbar py-1">
                                         {[
                                              { code: "us", name: "USA" },
                                              { code: "be", name: "Belgium" },
                                              { code: "cn", name: "China" },
                                              { code: "de", name: "Germany" },
                                         ].map((flag) => (
-                                             <div key={flag.code} className="relative w-14 h-14 shrink-0 rounded-full overflow-hidden border-2 border-white shadow-sm hover:scale-110 transition-transform cursor-pointer">
+                                             <div key={flag.code} className="relative w-10 h-10 md:w-14 md:h-14 shrink-0 rounded-full overflow-hidden border-2 border-white shadow-sm hover:scale-110 transition-transform cursor-pointer">
                                                   <Image
                                                        src={`https://flagcdn.com/w80/${flag.code}.png`}
                                                        alt={flag.name}
@@ -228,37 +228,37 @@ export default function Hero() {
 
                               {/* Card 2: Stats */}
                               <motion.div
-                                   className="bg-gray-50 rounded-4xl p-5 border border-gray-100 min-h-[100px] flex items-center"
+                                   className="bg-gray-50 rounded-4xl p-4 md:p-5 border border-gray-100 min-h-[80px] md:min-h-[100px] flex items-center"
                                    initial={{ opacity: 0, y: 20 }}
                                    animate={{ opacity: 1, y: 0 }}
                                    transition={{ delay: 0.7 }}
                               >
                                    <div className="w-full grid grid-cols-3 gap-2 divide-x divide-gray-200">
                                         <div className="flex flex-col xl:flex-row items-center justify-center gap-2 text-center xl:text-left px-1">
-                                             <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
-                                                  <CheckCircle className="w-5 h-5" />
+                                             <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
+                                                  <CheckCircle className="w-4 h-4 md:w-5 md:h-5" />
                                              </div>
                                              <div>
-                                                  <p className="text-lg xl:text-2xl font-bold text-gray-900">100%</p>
-                                                  <p className="text-xs text-gray-500 font-medium leading-tight">Legalitas</p>
+                                                  <p className="text-base md:text-lg xl:text-2xl font-bold text-gray-900">100%</p>
+                                                  <p className="text-[10px] md:text-xs text-gray-500 font-medium leading-tight">Legalitas</p>
                                              </div>
                                         </div>
                                         <div className="flex flex-col xl:flex-row items-center justify-center gap-2 text-center xl:text-left px-1">
-                                             <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 shrink-0">
-                                                  <GraduationCap className="w-5 h-5" />
+                                             <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 shrink-0">
+                                                  <GraduationCap className="w-4 h-4 md:w-5 md:h-5" />
                                              </div>
                                              <div>
-                                                  <p className="text-lg xl:text-2xl font-bold text-gray-900">1000+</p>
-                                                  <p className="text-xs text-gray-500 font-medium leading-tight">Alumni</p>
+                                                  <p className="text-base md:text-lg xl:text-2xl font-bold text-gray-900">1000+</p>
+                                                  <p className="text-[10px] md:text-xs text-gray-500 font-medium leading-tight">Alumni</p>
                                              </div>
                                         </div>
                                         <div className="flex flex-col xl:flex-row items-center justify-center gap-2 text-center xl:text-left px-1">
-                                             <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
-                                                  <Globe className="w-5 h-5" />
+                                             <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
+                                                  <Globe className="w-4 h-4 md:w-5 md:h-5" />
                                              </div>
                                              <div>
-                                                  <p className="text-lg xl:text-2xl font-bold text-gray-900">Resmi</p>
-                                                  <p className="text-xs text-gray-500 font-medium leading-tight">Pemerintah</p>
+                                                  <p className="text-base md:text-lg xl:text-2xl font-bold text-gray-900">Resmi</p>
+                                                  <p className="text-[10px] md:text-xs text-gray-500 font-medium leading-tight">Pemerintah</p>
                                              </div>
                                         </div>
                                    </div>

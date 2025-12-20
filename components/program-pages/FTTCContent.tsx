@@ -54,9 +54,17 @@ export default function FTTCContent() {
 
                          <div className="prose prose-lg max-w-none text-gray-700">
                               <h2 className="text-2xl font-bold text-[#021231] mb-4">Tentang Program</h2>
-                              <p className="mb-6">
-                                   Program FTTC dirancang khusus untuk lulusan SMA/SMK/S1 yang ingin melanjutkan karier di Jerman tanpa harus melalui proses kuliah yang panjang. Kami fokus pada *Vocational Training* (Ausbildung) dan *Direct Hiring* untuk tenaga profesional.
+                              <p className="mb-4">
+                                   Program FTTC dirancang khusus untuk percepatan karier tenaga kesehatan Indonesia menuju pasar kerja Jerman.
                               </p>
+                              <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+                                   <p className="font-bold text-blue-900 mb-2">Kriteria Khusus:</p>
+                                   <p className="text-blue-800">
+                                        • Mahasiswi STIKES / Keperawatan Aktif<br />
+                                        • Jenjang D3: Tingkat 2 & 3<br />
+                                        • Jenjang S1: Tingkat 3 & 4
+                                   </p>
+                              </div>
 
                               <h2 className="text-2xl font-bold text-[#021231] mb-4">Benefit Bergabung</h2>
                               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0 mb-8">

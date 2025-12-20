@@ -149,7 +149,7 @@ export default function Navbar() {
                                    ))}
 
                                    <div className="space-y-2 pt-2 border-t border-gray-50">
-                                        <div className="font-semibold text-black px-2">Program</div>
+                                        <div className="font-medium text-black px-2">Program</div>
                                         {PROGRAMS.map((program) => (
                                              <Link
                                                   key={program.label}
