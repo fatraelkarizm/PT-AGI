@@ -43,7 +43,7 @@ export default function FTTCContent() {
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                                    <MapPin className="w-8 h-8 text-[#CD1E1A] mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Lokasi Tujuan</h3>
-                                   <p className="text-gray-600">Jerman (Berlin, Munich, Hamburg)</p>
+                                   <p className="text-gray-600">Jerman</p>
                               </div>
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                                    <DollarSign className="w-8 h-8 text-[#CD1E1A] mb-4" />
