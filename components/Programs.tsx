@@ -15,6 +15,7 @@ import {
      YAIJFoundation,
      YAIJLogo,
 } from "@/assets";
+import { div } from "framer-motion/client";
 
 // Placeholder Partners (Can be replaced with real logos later)
 const PARTNERS = [
