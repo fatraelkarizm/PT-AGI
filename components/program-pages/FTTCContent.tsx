@@ -82,6 +82,7 @@ export default function FTTCContent() {
                               <p className="mb-6">
                                    Program FTTC dirancang khusus untuk lulusan SMA/SMK/S1 yang ingin melanjutkan karier di Jerman tanpa harus melalui proses kuliah yang panjang. Kami fokus pada *Vocational Training* (Ausbildung) dan *Direct Hiring* untuk tenaga profesional.
                               </p>
+                         </div>
 
                          <h2 className="text-2xl font-bold text-[#021231] mb-4">Benefit Bergabung</h2>
                          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0 mb-8">
