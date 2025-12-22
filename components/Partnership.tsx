@@ -98,7 +98,7 @@ export default function Partnership() {
      const content = PARTNER_CONTENT[activeTab];
 
      return (
-          <section className="py-24 bg-white relative overflow-hidden" id="partnership">
+          <section className="py-8 bg-white relative overflow-hidden" id="partnership">
 
                {/* Background Decor */}
                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-50/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
@@ -106,8 +106,8 @@ export default function Partnership() {
                <div className="container mx-auto px-4 md:px-6 relative z-10">
 
                     {/* Header & Controls */}
-                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-                         <div className="max-w-2xl">
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-8">
+                         <div className="max-w-3xl">
                               <motion.div
                                    initial={{ opacity: 0, y: 10 }}
                                    whileInView={{ opacity: 1, y: 0 }}
@@ -124,8 +124,8 @@ export default function Partnership() {
                                    transition={{ delay: 0.1 }}
                                    className="text-4xl md:text-5xl font-bold text-[#021231] leading-tight"
                               >
-                                   Mitra Pendidikan <br />
-                                   <span className="text-transparent bg-clip-text bg-linear-to-r from-[#CD1E1A] to-[#CD1E1A]">Masa Depan</span>
+                                   Mitra Pendidikan 
+                                   <span className="text-transparent bg-clip-text bg-linear-to-r from-[#CD1E1A] to-[#CD1E1A]"> Masa Depan</span>
                               </motion.h2>
                          </div>
 

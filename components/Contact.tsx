@@ -39,10 +39,9 @@ export default function Contact() {
                                              <MapPin className="w-6 h-6 text-white" />
                                         </div>
                                         <div>
-                                             <h3 className="font-bold text-lg mb-1">Kantor Pusat</h3>
+                                             <h4 className="font-bold text-lg mb-1">Kantor Pusat</h4>
                                              <p className="text-gray-400 group-hover:text-white transition-colors">
-                                                  Jl. Contoh Raya No. 123, Jakarta Selatan,<br />
-                                                  Indonesia 12345
+                                                  Jl. Gajah No 83, Cimahi Selatan, Bandung, 40531
                                              </p>
                                         </div>
                                    </div>
@@ -53,7 +52,9 @@ export default function Contact() {
                                         </div>
                                         <div>
                                              <h4 className="font-bold text-lg mb-1">Email</h4>
-                                             <p className="text-gray-400 group-hover:text-white transition-colors">ptakselerasiglobalindonesia@gmail.com</p>
+                                             <p className="text-gray-400 group-hover:text-white transition-colors">
+                                                  ptagi46@gmail.com
+                                             </p>
                                         </div>
                                    </div>
 
@@ -63,7 +64,9 @@ export default function Contact() {
                                         </div>
                                         <div>
                                              <h4 className="font-bold text-lg mb-1">WhatsApp</h4>
-                                             <p className="text-gray-400 group-hover:text-white transition-colors">+62 851-2979-1635</p>
+                                             <p className="text-gray-400 group-hover:text-white transition-colors">
+                                                  +62 823-4275-6169
+                                             </p>
                                         </div>
                                    </div>
                               </div>

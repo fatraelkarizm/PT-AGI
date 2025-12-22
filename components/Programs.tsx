@@ -55,7 +55,7 @@ const PROGRAMS = [
 export default function Programs() {
      return (
           <section className=" bg-white">
-               <div className="container mx-auto px-4 md:px-6">
+               <div className="container mx-auto px-4 md:px-6 py-4">
 
                     {/* Business Partners */}
                     <div className="mb-24 text-center">

@@ -174,14 +174,14 @@ export default function Navbar() {
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: "auto" }}
                               exit={{ opacity: 0, height: 0 }}
-                              className="lg:hidden bg-white border-t border-gray-100 overflow-hidden"
+                              className="lg:hidden bg-white border-t border-gray-100 overflow-hidden "
                          >
-                              <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+                              <div className="container mx-auto px-4 py-4 flex flex-col gap-4 ">
                                    {NAV_LINKS.map((link) => (
                                         <Link
                                              key={link.label}
                                              href={link.href}
-                                             className="px-2 font-medium text-black hover:text-[#CD1E1A]"
+                                             className="px-2 font-bold text-black hover:text-[#CD1E1A]"
                                              onClick={() => setMobileMenuOpen(false)}
                                         >
                                              {link.label}
@@ -189,7 +189,7 @@ export default function Navbar() {
                                    ))}
 
                                    <div className="space-y-2 pt-2 border-t border-gray-50">
-                                        <div className="font-medium text-black px-2">Program</div>
+                                        <div className="font-bold text-black px-2">Program</div>
                                         {PROGRAMS.map((program) => (
                                              <Link
                                                   key={program.label}
