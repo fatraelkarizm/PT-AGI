@@ -4,9 +4,9 @@ export const NAV_LINKS = [
 ];
 
 export const NAV_LINKS_RIGHT = [
-     { label: "Pembiayaan", href: "/#pembiayaan" },
-     { label: "FAQ", href: "/#faq" },
-     { label: "Kontak", href: "/#contact" },
+     { label: "Pembiayaan", href: "#pembiayaan" },
+     { label: "FAQ", href: "#faq" },
+     { label: "Kontak", href: "#contact" },
 ];
 
 export const PROGRAMS = [
@@ -14,5 +14,10 @@ export const PROGRAMS = [
      { label: "Professional Worker in Germany (PWIG)", href: "/programs/pwig" },
      { label: "Studi Vokasi & Training Industri", href: "/programs/vokasi" },
      { label: "Culture Exchange (USA, Belgia, China)", href: "/programs/exchange" },
+];
+
+export const PARTNERSHIPS = [
+     { label: "Mitra Kampus (Universitas)", href: "/kemitraan/kampus" },
+     { label: "Mitra Sekolah (SMK/SMA)", href: "/kemitraan/sekolah" },
 ];
 

@@ -164,9 +164,6 @@ export function generateOrganizationSchema() {
           },
           sameAs: [
                // Add social media URLs here
-               "https://facebook.com/ptagi",
-               "https://instagram.com/ptagi.official",
-               "https://linkedin.com/company/pt-agi",
           ],
      };
 }

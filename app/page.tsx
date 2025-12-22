@@ -1,14 +1,15 @@
 import Hero from "@/components/Hero";
 import Programs from "@/components/Programs";
-import Expenses from "@/components/Expenses";
+import Partnership from "@/components/Partnership";
 import FaQ from "@/components/FaQ";
 import Contact from "@/components/Contact";
 import StructuredData from "@/components/StructuredData";
 import { generateMetadata as generateSEOMetadata, generateOrganizationSchema, generateBreadcrumbSchema } from "@/lib/seo";
 import { Metadata } from "next";
+import { AGIModel } from "@/assets";
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: "Mitra Karier Internasional Terpercaya",
+  title: "Mitra Karier Internasional | PT AGI",
   description: "PT Akselerasi Global Indonesia - Wujudkan impian karier dan pendidikan global Anda. Program legal ke Jerman, USA, Belgia, dan China dengan bimbingan intensif.",
   keywords: [
     "karier internasional indonesia",
@@ -20,7 +21,7 @@ export const metadata: Metadata = generateSEOMetadata({
     "konsultan pendidikan luar negeri",
   ],
   canonical: "/",
-  ogImage: "/AGI-Model.png",
+  ogImage: AGIModel.src,
 });
 
 export default function Home() {
@@ -36,7 +37,7 @@ export default function Home() {
       <StructuredData data={schemas} />
       <Hero />
       <Programs />
-      <Expenses />
+      <Partnership />
       <FaQ />
       <Contact />
     </main>

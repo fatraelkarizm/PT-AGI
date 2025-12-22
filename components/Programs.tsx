@@ -4,6 +4,17 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import PartnerMarquee from "./PartnerMarquee";
+import {
+     AGILogo,
+     CulturalExchange,
+     HotelPria,
+     IAPAText,
+     Nurse,
+     TeamDoctor,
+     YAIJFoundation,
+     YAIJLogo,
+} from "@/assets";
 
 // Placeholder Partners (Can be replaced with real logos later)
 const PARTNERS = [
@@ -17,28 +28,25 @@ const PROGRAMS = [
      {
           title: "Fast Track to Career (FTTC)",
           description: "Program intensif persiapan bahasa dan budaya Jerman untuk studi dan karier.",
-          image: "/Nurse.jpg",
+          image: Nurse,
           link: "/programs/fttc"
      },
      {
           title: "Professional Worker in Germany",
           description: "Peluang pelatihan vokasi (Ausbildung) dan kerja paruh waktu di Jerman.",
-          image: "/team-doctor.jpg",
-
+          image: TeamDoctor,
           link: "/programs/pwig"
      },
      {
           title: "Studi Vokasi & Training Industri",
           description: "Program pendidikan vokasi berkualitas dengan beasiswa di China.",
-          image: "/hotel-pria.jpg",
-
+          image: HotelPria,
           link: "/programs/vokasi"
      },
      {
           title: "Culture Exchange",
           description: "Pertukaran budaya ke USA dan Belgia untuk pengalaman internasional.",
-          image: "/Cultural-Exchange.jpg",
-
+          image: CulturalExchange,
           link: "/programs/exchange"
      }
 ];
@@ -52,11 +60,11 @@ export default function Programs() {
                     <div className="mb-24 text-center">
                          <h1 className="text-xl font-bold tracking-widest text-[#CD1E1A] uppercase mb-8">
                               Didukung Oleh Mitra Terpercaya
-                         </h1>
+                         </h3>
                          <div className="flex flex-wrap justify-center items-center gap-12 opacity-80 transition-all duration-500">
-                              <Image src="/YAIJ-Logo.png" alt="YAIJ Logo" width={180} height={60} className="h-16 w-auto object-contain transition-all" />
-                              <Image src="/LOGO_IAPA_Text.png" alt="IAPA Logo" width={180} height={60} className="h-14 w-auto object-contain transition-all" />
-                              <Image src="/YAIJ-Foundation.jpg" alt="YAIJ Foundation Logo" width={180} height={60} className="h-14 w-auto  object-contain transition-all" />
+                              <Image src="/YAIJ-Logo.png" alt="YAIJ Logo" width={180} height={60} className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                              <Image src="/LOGO_IAPA_Text.png" alt="IAPA Logo" width={180} height={60} className="h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                              <Image src="/YAIJ-Foundation.jpg" alt="YAIJ Foundation Logo" width={180} height={60} className="h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
                          </div>
                     </div>
 
@@ -64,7 +72,7 @@ export default function Programs() {
                     <div id="about-preview" className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24 scroll-mt-24">
                          <div className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl group">
                               <Image
-                                   src="/AGI-LOGO.jpeg"
+                                   src={AGILogo}
                                    alt="Team at a glance"
                                    fill
                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -75,10 +83,8 @@ export default function Programs() {
                               <h2 className="text-3xl md:text-4xl font-bold text-[#021231]">
                                    PT Akselerasi Global Indonesia
                               </h2>
-                              <p className="text-gray-600 leading-relaxed text-lg">
-                                   Sebuah lembaga terdepan yang menjembatani talenta muda Indonesia dengan peluang global.
-                                   Kami fokus pada legalitas, transparansi, dan persiapan komprehensif untuk memastikan
-                                   kesuksesan karier dan pendidikan Anda di luar negeri.
+                              <p className="text-gray-600 leading-relaxed text-lg text-justify">
+                                   PT AGI Adalah bagian dari PT YAIJ Group. Sebuah perusahaan yang sudah berdiri sejak tahun 2013, menjadi agen terbesar di Indonesia yang telah berbadan hukum resmi dan menjadi satu-satunya lembaga yang tergabung di Asosiasi Internasional (IAPA).
                               </p>
                               <ul className="space-y-3">
                                    {[

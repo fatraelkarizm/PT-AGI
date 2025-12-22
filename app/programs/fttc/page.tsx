@@ -3,7 +3,7 @@ import { generateMetadata as generateSEOMetadata } from "@/lib/seo";
 import FTTCContent from "@/components/program-pages/FTTCContent";
 
 export const metadata: Metadata = generateSEOMetadata({
-     title: "Fast Track to Career (FTTC) - Program Karier Jerman",
+     title: "Fast Track to Career (FTTC) | PT AGI",
      description: "Program intensif 6-9 bulan untuk persiapan karier di Jerman. Pelatihan bahasa, budaya, dan kompetensi teknis dengan penempatan kerja terjamin. Gaji €2000-€3500/bulan.",
      keywords: [
           "fast track to career",

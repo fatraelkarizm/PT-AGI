@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { AppleTouchIcon, Favicon } from "@/assets";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PT AGI - Akselerasi Global Indonesia",
+  title: "Akselerasi Global Indonesia | PT AGI",
   description: "Bangun Karier Internasional Secara Legal & Terarah with PT AGI.",
+  icons: {
+    icon: Favicon.src,
+    apple: AppleTouchIcon.src
+  }
 };
 
 export default function RootLayout({
