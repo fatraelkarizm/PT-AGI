@@ -62,7 +62,7 @@ export default function Hero() {
                               <motion.div variants={itemVariants} className="relative z-10 mb-6">
                                    <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white text-sm md:text-base font-medium border border-white/10 backdrop-blur-sm shadow-xl">
                                         <Globe className="w-4 h-4 text-[#CD1E1A]" />
-                                        Mitra Resmi Karier Internasional
+                                        Part of PT YAIJ Group
                                    </span>
                               </motion.div>
 

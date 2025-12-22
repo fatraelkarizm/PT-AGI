@@ -2,16 +2,16 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight, CheckCircle, Clock, MapPin, DollarSign, Calendar } from "lucide-react";
+import { ArrowRight, CheckCircle, Clock, MapPin, DollarSign, Calendar, Wallet } from "lucide-react";
 
 export default function FTTCContent() {
      return (
           <main className="min-h-screen bg-white font-sans pt-24 pb-12">
-               <div className="container mx-auto px-4 md:px-6">
+               <div className="container mx-auto px-4 md:px-6 relative z-10 h-full">
                     <motion.div
                          initial={{ opacity: 0, y: 20 }}
                          animate={{ opacity: 1, y: 0 }}
-                         className="max-w-4xl mx-auto"
+                         className="max-w-5xl mx-auto"
                     >
                          <div className="mb-8">
                               <span className="inline-block px-4 py-1.5 rounded-full bg-red-100 text-[#CD1E1A] font-medium text-sm mb-4">
@@ -34,7 +34,7 @@ export default function FTTCContent() {
                               />
                          </div>
 
-                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                                    <Clock className="w-8 h-8 text-[#CD1E1A] mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Durasi Program</h3>
@@ -49,6 +49,25 @@ export default function FTTCContent() {
                                    <DollarSign className="w-8 h-8 text-[#CD1E1A] mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Potensi Gaji</h3>
                                    <p className="text-gray-600">€2000 - €3500 / Bulan</p>
+                              </div>
+                         </div>
+
+                         <div className="mb-12 p-6 bg-yellow-50 border border-yellow-200 rounded-2xl flex flex-col md:flex-row gap-6 items-start md:items-center">
+                              <div className="bg-yellow-100 p-3 rounded-full shrink-0">
+                                   <Wallet className="w-8 h-8 text-yellow-600" />
+                              </div>
+                              <div className="flex-1">
+                                   <div className="flex flex-wrap items-center gap-3 mb-2">
+                                        <h3 className="text-xl font-bold text-[#021231]">
+                                             Dukungan Finansial Tersedia
+                                        </h3>
+                                        <span className="bg-[#CD1E1A] text-white text-sm font-black px-4 py-1.5 rounded-full shadow-lg transform -rotate-2">
+                                             COVER 70%
+                                        </span>
+                                   </div>
+                                   <p className="text-gray-700 leading-relaxed">
+                                        Kami memahami tantangan biaya awal. Melalui program <strong>Dana Bantuan Bergulir</strong>, Anda bisa mendapatkan dukungan pembiayaan hingga <strong>70%</strong> dari total biaya program, hari tua nanti bayar setelah sukses.
+                                   </p>
                               </div>
                          </div>
 

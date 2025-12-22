@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero";
 import Programs from "@/components/Programs";
-import Expenses from "@/components/Expenses";
+import Partnership from "@/components/Partnership";
 import FaQ from "@/components/FaQ";
 import Contact from "@/components/Contact";
 import StructuredData from "@/components/StructuredData";
@@ -36,7 +36,7 @@ export default function Home() {
       <StructuredData data={schemas} />
       <Hero />
       <Programs />
-      <Expenses />
+      <Partnership />
       <FaQ />
       <Contact />
     </main>
