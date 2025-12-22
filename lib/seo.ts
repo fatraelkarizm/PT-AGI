@@ -13,12 +13,14 @@ export interface SEOProps {
      modifiedTime?: string;
 }
 
+import AGILogo from "../assets/icons/AGI-LOGO.jpeg";
+
 const SITE_CONFIG = {
      name: "PT Akselerasi Global Indonesia",
      shortName: "PT AGI",
      description: "Mitra resmi karier internasional Indonesia. Program studi dan kerja legal ke Jerman, USA, Belgia, dan China.",
      url: process.env.NEXT_PUBLIC_SITE_URL || "https://agiindonesia.id",
-     logo: "/AGI-LOGO.jpeg",
+     logo: AGILogo,
      ogImage: "/og-image.jpg",
      twitterHandle: "@ptagi_official",
      locale: "id_ID",

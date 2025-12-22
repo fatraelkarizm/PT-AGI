@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle, Award, Users, Globe } from "lucide-react";
+import { AGILogo } from "@/assets/icons";
 
 export default function AboutPage() {
      return (
@@ -80,7 +81,7 @@ export default function AboutPage() {
                          <div className="bg-[#021231] rounded-3xl p-8 md:p-12 text-white flex flex-col md:flex-row items-center gap-8">
                               <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gray-300 shrink-0 overflow-hidden relative border-4 border-[#CD1E1A]">
                                    {/* Placeholder for CEO Image */}
-                                   <Image src="/AGI-LOGO.jpeg" alt="CEO" fill className="object-cover" />
+                                   <Image src={AGILogo.src} alt="CEO" fill className="object-cover" />
                               </div>
                               <div>
                                    <p className="italic text-gray-300 text-lg mb-6">
