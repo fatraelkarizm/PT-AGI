@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle, Clock, MapPin, DollarSign, Calendar, Wallet, BookOpen, Users, Stethoscope, TrendingUp } from "lucide-react";
+import { Nurse } from "@/assets";
 
 export default function FTTCContent() {
      const steps = [
@@ -51,7 +52,7 @@ export default function FTTCContent() {
 
                          <div className="aspect-video relative rounded-3xl overflow-hidden shadow-2xl mb-12">
                               <Image
-                                   src="/Nurse.jpg"
+                                   src={Nurse}
                                    alt="FTTC Students"
                                    fill
                                    className="object-cover"

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle, Clock, MapPin, DollarSign, Wallet, Languages, FileText, Building, TrendingUp } from "lucide-react";
+import { TeamDoctor } from "@/assets";
 
 export default function PWIGPage() {
      const steps = [
@@ -51,7 +52,7 @@ export default function PWIGPage() {
 
                          <div className="aspect-video relative rounded-3xl overflow-hidden shadow-2xl mb-12">
                               <Image
-                                   src="/team-doctor.jpg"
+                                   src={TeamDoctor}
                                    alt="Professional Workers"
                                    fill
                                    className="object-cover"

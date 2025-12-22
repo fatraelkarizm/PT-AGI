@@ -16,6 +16,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
+import { GlobalUniversity, VocationalSchool } from "@/assets";
 
 type PartnerType = 'campus' | 'school';
 
@@ -52,7 +53,7 @@ const PARTNER_CONTENT = {
           ],
           ctaText: "Pelajari Kemitraan Kampus",
           ctaLink: "/kemitraan/kampus",
-          image: "/Global-University.png"
+          image: GlobalUniversity
      },
      school: {
           label: "Sekolah (SMK / SMA)",
@@ -86,7 +87,7 @@ const PARTNER_CONTENT = {
           ],
           ctaText: "Pelajari Kemitraan Sekolah",
           ctaLink: "/kemitraan/sekolah",
-          image: "/Vocational-School.png"
+          image: VocationalSchool
      }
 };
 

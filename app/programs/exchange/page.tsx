@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle, Clock, MapPin, DollarSign, Wallet, BookOpen, Home, Globe, UserCheck } from "lucide-react";
+import { CulturalExchange } from "@/assets";
 
 export default function CulturalExchangePage() {
      const steps = [
@@ -51,7 +52,7 @@ export default function CulturalExchangePage() {
 
                          <div className="aspect-video relative rounded-3xl overflow-hidden shadow-2xl mb-12">
                               <Image
-                                   src="/Cultural-Exchange.jpg"
+                                   src={CulturalExchange}
                                    alt="Cultural Exchange"
                                    fill
                                    className="object-cover"

@@ -6,6 +6,7 @@ import Contact from "@/components/Contact";
 import StructuredData from "@/components/StructuredData";
 import { generateMetadata as generateSEOMetadata, generateOrganizationSchema, generateBreadcrumbSchema } from "@/lib/seo";
 import { Metadata } from "next";
+import { AGIModel } from "@/assets";
 
 export const metadata: Metadata = generateSEOMetadata({
   title: "Mitra Karier Internasional | PT AGI",
@@ -20,7 +21,7 @@ export const metadata: Metadata = generateSEOMetadata({
     "konsultan pendidikan luar negeri",
   ],
   canonical: "/",
-  ogImage: "/AGI-Model.png",
+  ogImage: AGIModel.src,
 });
 
 export default function Home() {

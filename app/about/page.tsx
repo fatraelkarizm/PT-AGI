@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle, Award, Users, Globe } from "lucide-react";
+import { AGILogo } from "@/assets";
 
 export default function AboutPage() {
      return (
@@ -18,7 +19,7 @@ export default function AboutPage() {
                                    Tentang Kami
                               </h1>
                               <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                                   PT Akselerasi Global Indonesia (AGI) adalah jembatan impian Anda menuju karier dan pendidikan internasional.
+                                   PT Akselerasi Global Indonesia (AGI) adalah bagian dari PT YAIJ Group yang sudah berdiri sejak tahun 2013, menjadi agen terbesar di Indonesia yang telah berbadan hukum resmi dan menjadi satu-satunya lembaga yang tergabung di Asosiasi Internasional (IAPA).
                               </p>
                          </div>
 
@@ -27,17 +28,16 @@ export default function AboutPage() {
                               <div className="p-8 bg-gray-50 rounded-3xl border border-gray-100">
                                    <h2 className="text-2xl font-bold text-[#021231] mb-4">Visi Kami</h2>
                                    <p className="text-gray-700 leading-relaxed">
-                                        Menjadi perusahaan konsultan pendidikan dan karier internasional terdepan di Indonesia yang terpercaya, transparan, dan profesional dalam mencetak SDM global yang berkualitas.
+                                        Mewujudkan mimpi pemuda Indonesia untuk belajar dan bekerja di Dunia Global
                                    </p>
                               </div>
                               <div className="p-8 bg-gray-50 rounded-3xl border border-gray-100">
                                    <h2 className="text-2xl font-bold text-[#021231] mb-4">Misi Kami</h2>
                                    <ul className="space-y-3">
                                         {[
-                                             "Memberikan informasi yang jujur dan transparan.",
-                                             "Menyediakan pelatihan bahasa dan *soft skill* terbaik.",
-                                             "Menjalin kerjasama dengan mitra global yang kredibel.",
-                                             "Mendampingi peserta dari persiapan hingga penempatan."
+                                             "Menjadi agensi terdepan, terluas dan terpercaya yang menghubungkan pasar kerja global dan talenta berkualitas",
+                                             "Membantu 1.000.000 pemuda untuk belajar dan bekerja di Dunia Global.",
+                                             "Membuka mata Indonesia bahwa SIAPAPUN BISA kuliah dan bekerja di Eropa",
                                         ].map((item, i) => (
                                              <li key={i} className="flex items-start gap-3 text-gray-700">
                                                   <CheckCircle className="w-5 h-5 text-[#CD1E1A] shrink-0 mt-0.5" />
@@ -80,7 +80,7 @@ export default function AboutPage() {
                          <div className="bg-[#021231] rounded-3xl p-8 md:p-12 text-white flex flex-col md:flex-row items-center gap-8">
                               <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gray-300 shrink-0 overflow-hidden relative border-4 border-[#CD1E1A]">
                                    {/* Placeholder for CEO Image */}
-                                   <Image src="/AGI-LOGO.jpeg" alt="CEO" fill className="object-cover" />
+                                   <Image src={AGILogo} alt="CEO" fill className="object-cover" />
                               </div>
                               <div>
                                    <p className="italic text-gray-300 text-lg mb-6">

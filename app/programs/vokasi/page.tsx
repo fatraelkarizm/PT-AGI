@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle, Clock, MapPin, DollarSign, Wallet, BookOpen, GraduationCap, Wrench, Briefcase } from "lucide-react";
+import { HotelPria } from "@/assets";
 
 export default function VokasiPage() {
      const steps = [
@@ -51,7 +52,7 @@ export default function VokasiPage() {
 
                          <div className="aspect-video relative rounded-3xl overflow-hidden shadow-2xl mb-12">
                               <Image
-                                   src="/hotel-pria.jpg"
+                                   src={HotelPria}
                                    alt="Vocational Training"
                                    fill
                                    className="object-cover"

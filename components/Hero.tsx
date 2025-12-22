@@ -4,6 +4,7 @@ import { motion, Variants } from "framer-motion";
 import { ArrowRight, Globe, CheckCircle, GraduationCap, Briefcase } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { AGIModel } from "@/assets";
 
 export default function Hero() {
      const containerVariants = {
@@ -189,7 +190,7 @@ export default function Hero() {
                                    {/* Image - Adjusted Size */}
                                    <div className="relative z-10 w-full h-full flex items-end justify-center overflow-hidden rounded-4xl pt-12">
                                         <Image
-                                             src="/AGI-Model.png"
+                                             src={AGIModel}
                                              alt="PT AGI Students"
                                              width={600}
                                              height={800}

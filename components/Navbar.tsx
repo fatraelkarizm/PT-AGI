@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NAV_LINKS, NAV_LINKS_RIGHT, PROGRAMS, PARTNERSHIPS } from "@/constants/navbar";
+import { AGILogo } from "@/assets";
 
 export default function Navbar() {
      const [isScrolled, setIsScrolled] = useState(false);
@@ -36,7 +37,7 @@ export default function Navbar() {
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 ">
                          <Image
-                              src="/AGI-LOGO.jpeg"
+                              src={AGILogo}
                               alt="PT AGI Logo"
                               width={120}
                               height={40}

@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle, Globe, BookOpen, Users, Building2, TrendingUp, Handshake } from "lucide-react";
+import { GlobalUniversity } from "@/assets";
+
 
 export default function KampusContent() {
      return (
@@ -27,7 +29,7 @@ export default function KampusContent() {
 
                          <div className="aspect-video relative rounded-3xl overflow-hidden shadow-2xl mb-12 group">
                               <Image
-                                   src="/Global-University.png"
+                                   src={GlobalUniversity}
                                    alt="Partnership Kampus"
                                    fill
                                    className="object-cover transition-transform duration-700 group-hover:scale-105"

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle, GraduationCap, Users, BookOpen, Award, Rocket, School } from "lucide-react";
+import { VocationalSchool } from "@/assets";
 
 export default function SekolahContent() {
      return (
@@ -27,7 +28,7 @@ export default function SekolahContent() {
 
                          <div className="aspect-video relative rounded-3xl overflow-hidden shadow-2xl mb-12 group">
                               <Image
-                                   src="/Vocational-School.png"
+                                   src={VocationalSchool}
                                    alt="Partnership Sekolah"
                                    fill
                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
