@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import PartnerMarquee from "./PartnerMarquee";
 import {
      AGILogo,
      CulturalExchange,
@@ -63,11 +64,7 @@ export default function Programs() {
                          <h3 className="text-xl font-bold tracking-widest text-[#CD1E1A] uppercase mb-8">
                               Didukung Oleh Mitra Terpercaya
                          </h3>
-                         <div className="flex flex-wrap justify-center items-center gap-12 opacity-80 transition-all duration-500">
-                              <Image src={YAIJLogo} alt="YAIJ Logo" width={180} height={60} className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
-                              <Image src={IAPAText} alt="IAPA Logo" width={180} height={60} className="h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
-                              <Image src={YAIJFoundation} alt="YAIJ Foundation Logo" width={180} height={60} className="h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
-                         </div>
+                         <PartnerMarquee />
                     </div>
 
                     {/* At a Glance Section */}

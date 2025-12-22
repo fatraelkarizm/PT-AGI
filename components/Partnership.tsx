@@ -135,7 +135,7 @@ export default function Partnership() {
                               <div className="relative">
                                    <button
                                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                                        className="w-full md:w-[320px] bg-white border-2 border-[#021231] text-[#021231] p-4 rounded-xl flex items-center justify-between font-bold text-lg hover:shadow-lg transition-all"
+                                        className="w-full md:w-auto bg-white border-2 border-[#021231] text-[#021231] p-4 rounded-xl flex items-center justify-between font-bold text-lg hover:shadow-lg transition-all"
                                    >
                                         <div className="flex items-center gap-3">
                                              {activeTab === 'campus' ? <Building2 className="text-[#CD1E1A]" /> : <School className="text-[#CD1E1A]" />}
