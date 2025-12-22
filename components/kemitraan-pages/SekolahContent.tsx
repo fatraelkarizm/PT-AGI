@@ -5,6 +5,26 @@ import Image from "next/image";
 import { CheckCircle, GraduationCap, Users, BookOpen, Award, Rocket, School } from "lucide-react";
 import { VocationalSchool } from "@/assets";
 
+import PartnerCollage from "@/components/PartnerCollage";
+import { SMKN2Gowa, SMKN3Gowa } from "@/assets/school";
+
+const SEKOLAH_PARTNERS = [
+     {
+          id: 1,
+          image: SMKN2Gowa,
+          label: "SMKN 2 Gowa",
+          rotation: -5,
+          position: { top: "15%", left: "10%" }
+     },
+     {
+          id: 2,
+          image: SMKN3Gowa,
+          label: "SMKN 3 Gowa",
+          rotation: 4,
+          position: { top: "20%", right: "10%" }
+     }
+];
+
 export default function SekolahContent() {
      return (
           <main className="min-h-screen bg-white font-sans pt-24 pb-12">
@@ -22,7 +42,7 @@ export default function SekolahContent() {
                                    Mitra Sekolah (SMA/SMK)
                               </h1>
                               <p className="text-xl text-gray-600 leading-relaxed">
-                                   Mempersiapkan siswa SMK & SMA untuk sukses di Jerman melalui jalur *Ausbildung* (Kuliah Vokasi). Bekali siswa Anda dengan skill masa depan.
+                                   Mempersiapkan siswa SMK & SMA untuk sukses di Jerman melalui jalur <b>Ausbildung</b> (Kuliah Vokasi). Bekali siswa Anda dengan skill masa depan.
                               </p>
                          </div>
 
@@ -58,10 +78,19 @@ export default function SekolahContent() {
                               </div>
                          </div>
 
+                         {/* Collage Section for Sekolah - Moved after feature grid */}
+                         <div className="mb-16 -mx-4 md:mx-0">
+                              <PartnerCollage
+                                   title="Sekolah"
+                                   items={SEKOLAH_PARTNERS}
+                                   subtitle="Membuka gerbang karier internasional bagi siswa SMK & SMA Indonesia."
+                              />
+                         </div>
+
                          <div className="prose prose-lg max-w-none text-gray-700">
                               <h2 className="text-2xl font-bold text-[#021231] mb-4">Masa Depan Lulusan Anda</h2>
-                              <p className="mb-6">
-                                   Banyak lulusan SMK/SMA bingung menentukan arah setelah lulus. Program kami memberikan *roadmap* yang jelas menuju karier profesional di Jerman, yang tidak hanya memberikan gaji tinggi (€1000++ saat belajar), tetapi juga pendidikan gratis dan pengalaman internasional.
+                              <p className="mb-6 text-justify">
+                                   Banyak lulusan SMK/SMA bingung menentukan arah setelah lulus. Program kami memberikan roadmap yang jelas menuju karier profesional di Jerman, yang tidak hanya memberikan gaji tinggi (€1000++ saat belajar), tetapi juga pendidikan gratis dan pengalaman internasional.
                               </p>
 
                               <h2 className="text-2xl font-bold text-[#021231] mb-4">Fasilitas Kerjasama</h2>

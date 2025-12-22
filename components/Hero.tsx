@@ -49,7 +49,7 @@ export default function Hero() {
 
      return (
           <section id="home" className="relative w-full min-h-screen flex items-center bg-[#ffffff] overflow-hidden pt-8 pb-12 lg:pt-8 lg:pb-0">
-               <div className="container mx-auto px-4 md:px-6 relative z-10 h-full">
+               <div className="container mx-auto px-4 md:px-6 pt-8 lg:pt-0 relative z-10 h-full">
                     <div className="grid grid-cols-1 lg:grid-cols-12 lg:grid-rows-[1fr_auto] gap-4 mx-auto max-w-7xl h-auto lg:h-[80vh] items-stretch">
 
                          {/* Left Main Card - Dark Blue (Brand) */}

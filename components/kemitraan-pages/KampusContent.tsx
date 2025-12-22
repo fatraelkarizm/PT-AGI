@@ -6,6 +6,34 @@ import { CheckCircle, Globe, BookOpen, Users, Building2, TrendingUp, Handshake }
 import { GlobalUniversity } from "@/assets";
 
 
+import PartnerCollage from "@/components/PartnerCollage";
+import { PoliteknikAmbon, PoliteknikNest, STIEAmbarukmo } from "@/assets/school";
+
+const KAMPUS_PARTNERS = [
+     {
+          id: 1,
+          image: PoliteknikAmbon,
+          label: "Politeknik Ambon",
+          rotation: -6,
+          position: { top: "10%", left: "5%" }
+     },
+     {
+          id: 2,
+          image: STIEAmbarukmo,
+          label: "STIE Ambarukmo",
+          rotation: -3,
+          position: { top: "25%", right: "5%" }
+     },
+     {
+          id: 3,
+          image: PoliteknikNest,
+          label: "Politeknik Nest",
+          rotation: 4,
+          position: { bottom: "15%", left: "15%" }
+     }
+];
+
+
 export default function KampusContent() {
      return (
           <main className="min-h-screen bg-white font-sans pt-24 pb-12">
@@ -23,7 +51,7 @@ export default function KampusContent() {
                                    Mitra Kampus & Universitas
                               </h1>
                               <p className="text-xl text-gray-600 leading-relaxed">
-                                   Tingkatkan reputasi global institusi Anda dengan menyalurkan mahasiswa dan alumni ke pasar kerja Jerman. Solusi *link and match* internasional yang nyata.
+                                   Tingkatkan reputasi global institusi Anda dengan menyalurkan mahasiswa dan alumni ke pasar kerja Jerman. Solusi link and match internasional yang nyata.
                               </p>
                          </div>
 
@@ -59,10 +87,19 @@ export default function KampusContent() {
                               </div>
                          </div>
 
+                         {/* Collage Section for Campus - Moved after feature grid */}
+                         <div className="mb-16 -mx-4 md:mx-0">
+                              <PartnerCollage
+                                   title="Kampus"
+                                   items={KAMPUS_PARTNERS}
+                                   subtitle="Kolaborasi strategis untuk mencetak lulusan berdaya saing global."
+                              />
+                         </div>
+
                          <div className="prose prose-lg max-w-none text-gray-700">
                               <h2 className="text-2xl font-bold text-[#021231] mb-4">Mengapa Bermitra dengan PT AGI?</h2>
-                              <p className="mb-6">
-                                   Tantangan utama pendidikan tinggi saat ini adalah *skills gap* dan penyerapan lulusan. Kami hadir sebagai jembatan strategis yang mempersiapkan mahasiswa Anda dengan kompetensi bahasa dan teknis berstandar Jerman, memastikan mereka siap bersaing di level internasional.
+                              <p className="mb-6 text-justify">
+                                   Tantangan utama pendidikan tinggi saat ini adalah <b>skills gap</b> dan <b>penyerapan lulusan</b>. Kami hadir sebagai jembatan strategis yang mempersiapkan mahasiswa Anda dengan kompetensi bahasa dan teknis berstandar Jerman, memastikan mereka siap bersaing di level internasional.
                               </p>
 
                               <h2 className="text-2xl font-bold text-[#021231] mb-4">Skema Kerjasama</h2>

@@ -35,21 +35,18 @@ const PROGRAMS = [
           title: "Professional Worker in Germany",
           description: "Peluang pelatihan vokasi (Ausbildung) dan kerja paruh waktu di Jerman.",
           image: TeamDoctor,
-
           link: "/programs/pwig"
      },
      {
           title: "Studi Vokasi & Training Industri",
           description: "Program pendidikan vokasi berkualitas dengan beasiswa di China.",
           image: HotelPria,
-
           link: "/programs/vokasi"
      },
      {
           title: "Culture Exchange",
           description: "Pertukaran budaya ke USA dan Belgia untuk pengalaman internasional.",
           image: CulturalExchange,
-
           link: "/programs/exchange"
      }
 ];
@@ -82,7 +79,7 @@ export default function Programs() {
                               <h2 className="text-3xl md:text-4xl font-bold text-[#021231]">
                                    PT Akselerasi Global Indonesia
                               </h2>
-                              <p className="text-gray-600 leading-relaxed text-lg">
+                              <p className="text-gray-600 leading-relaxed text-lg text-justify">
                                    PT AGI Adalah bagian dari PT YAIJ Group. Sebuah perusahaan yang sudah berdiri sejak tahun 2013, menjadi agen terbesar di Indonesia yang telah berbadan hukum resmi dan menjadi satu-satunya lembaga yang tergabung di Asosiasi Internasional (IAPA).
                               </p>
                               <ul className="space-y-3">

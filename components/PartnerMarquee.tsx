@@ -42,14 +42,17 @@ export default function PartnerMarquee() {
                <div className="flex flex-col gap-5 overflow-hidden bg-white p-6 rounded-3xl border border-gray-100 shadow-sm relative group hover:shadow-md transition-shadow">
                     <div className="flex items-center justify-between px-2">
                          <div className="flex items-center gap-3">
-                              <span className="text-2xl rounded-full bg-gray-50 w-10 h-10 flex items-center justify-center border border-gray-100">
-                                   🇩🇪
-                              </span>
+                              <Image
+                                   src="https://flagcdn.com/w80/de.png"
+                                   alt="Agentur Taunus"
+                                   width={24}
+                                   height={24}
+                              />
                               <div>
                                    <h3 className="text-lg font-bold text-[#021231] leading-none">
                                         Mitra Jerman
                                    </h3>
-                                   <p className="text-xs text-gray-500 font-medium">
+                                   <p className="text-xs text-gray-500 font-medium text-left">
                                         German Partners
                                    </p>
                               </div>
@@ -63,14 +66,17 @@ export default function PartnerMarquee() {
                <div className="flex flex-col gap-5 overflow-hidden bg-white p-6 rounded-3xl border border-gray-100 shadow-sm relative group hover:shadow-md transition-shadow">
                     <div className="flex items-center justify-between px-2">
                          <div className="flex items-center gap-3">
-                              <span className="text-2xl rounded-full bg-gray-50 w-10 h-10 flex items-center justify-center border border-gray-100">
-                                   🇮🇩
-                              </span>
+                              <Image
+                                   src="https://flagcdn.com/w80/id.png"
+                                   alt="Agentur Taunus"
+                                   width={24}
+                                   height={24}
+                              />
                               <div>
                                    <h3 className="text-lg font-bold text-[#021231] leading-none">
                                         Mitra Indonesia
                                    </h3>
-                                   <p className="text-xs text-gray-500 font-medium">
+                                   <p className="text-xs text-gray-500 font-medium text-left">
                                         Indonesia Partners
                                    </p>
                               </div>
