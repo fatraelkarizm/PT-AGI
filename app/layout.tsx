@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PT AGI - Akselerasi Global Indonesia",
+  title: "Akselerasi Global Indonesia | PT AGI",
   description: "Bangun Karier Internasional Secara Legal & Terarah with PT AGI.",
 };
 

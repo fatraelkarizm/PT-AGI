@@ -72,11 +72,52 @@ export default function CulturalExchangePage() {
                          </div>
 
                          <div className="prose prose-lg max-w-none text-gray-700">
-                              <h2 className="text-2xl font-bold text-[#021231] mb-4">Tentang Program</h2>
-                              <p className="mb-6">
-                                   Program ini memberikan kesempatan bagi pemuda-pemudi Indonesia untuk tinggal bersama keluarga lokal di luar negeri (Au Pair) atau bekerja paruh waktu saat liburan musim panas (Summer Work).
-                                   Tujuannya adalah pertukaran budaya, peningkatan kemampuan bahasa asing, dan kemandirian.
-                              </p>
+                              <div className="mb-16">
+                                   <h2 className="text-2xl font-bold text-[#021231] mb-8">How Culture Exchange Works</h2>
+                                   <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                                        {[
+                                             {
+                                                  step: "01",
+                                                  title: "Pre-Departure Preparation",
+                                                  desc: "Persiapan bahasa dan pemahaman budaya sebelum keberangkatan."
+                                             },
+                                             {
+                                                  step: "02",
+                                                  title: "Host Family Living",
+                                                  desc: "Peserta tinggal bersama host family untuk interaksi budaya secara langsung."
+                                             },
+                                             {
+                                                  step: "03",
+                                                  title: "Cultural Immersion",
+                                                  desc: "Pengalaman hidup sehari-hari dalam lingkungan internasional untuk meningkatkan kemampuan bahasa dan adaptasi."
+                                             },
+                                             {
+                                                  step: "04",
+                                                  title: "Global Experience",
+                                                  desc: "Peserta memperoleh pengalaman lintas budaya dan wawasan global."
+                                             }
+                                        ].map((item, i) => (
+                                             <div key={i} className="relative group">
+                                                  <div className="text-4xl font-bold text-gray-100 mb-4 group-hover:text-purple-50 transition-colors">
+                                                       {item.step}
+                                                  </div>
+                                                  <h3 className="text-lg font-bold text-[#021231] mb-2">{item.title}</h3>
+                                                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                                             </div>
+                                        ))}
+                                   </div>
+                              </div>
+
+                              <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-12 shadow-sm relative overflow-hidden">
+                                   <div className="absolute top-0 right-0 w-32 h-32 bg-purple-50 rounded-bl-full -mr-8 -mt-8" />
+                                   <h2 className="text-2xl font-bold text-[#021231] mb-4 relative z-10">Program Overview</h2>
+                                   <div className="relative z-10">
+                                        <h3 className="text-xl font-semibold text-purple-700 mb-3">Culture Exchange Program</h3>
+                                        <p className="text-gray-700 leading-relaxed text-lg">
+                                             Program pertukaran budaya internasional yang memberikan pengalaman tinggal di luar negeri untuk pengembangan bahasa, budaya, dan perspektif global.
+                                        </p>
+                                   </div>
+                              </div>
 
                               <h2 className="text-2xl font-bold text-[#021231] mb-4">Yang Akan Anda Dapatkan</h2>
                               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0 mb-8">

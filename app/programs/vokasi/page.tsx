@@ -72,11 +72,52 @@ export default function VokasiPage() {
                          </div>
 
                          <div className="prose prose-lg max-w-none text-gray-700">
-                              <h2 className="text-2xl font-bold text-[#021231] mb-4">Tentang Vokasi</h2>
-                              <p className="mb-6">
-                                   Bekerjasama dengan institusi politeknik terkemuka di Asia Timur, program ini menawarkan pendidikan berbasis praktik (70% praktek, 30% teori).
-                                   Lulusan akan memiliki keahlian spesifik yang sangat dicari oleh perusahaan multinasional, khususnya di sektor manufaktur, teknologi EV, dan logistik.
-                              </p>
+                              <div className="mb-16">
+                                   <h2 className="text-2xl font-bold text-[#021231] mb-8">How Vocational Works</h2>
+                                   <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                                        {[
+                                             {
+                                                  step: "01",
+                                                  title: "Language Preparation",
+                                                  desc: "Persiapan bahasa Jerman sebagai dasar studi dan praktik kerja."
+                                             },
+                                             {
+                                                  step: "02",
+                                                  title: "Vocational Study",
+                                                  desc: "Peserta menjalani pendidikan vokasi berbasis praktik dengan sistem 2 hari teori dan 3 hari praktik."
+                                             },
+                                             {
+                                                  step: "03",
+                                                  title: "Industry Training",
+                                                  desc: "Pelatihan langsung di lingkungan industri nyata di Jerman."
+                                             },
+                                             {
+                                                  step: "04",
+                                                  title: "Work Readiness",
+                                                  desc: "Peserta memiliki kesiapan profesional dan pengalaman kerja internasional."
+                                             }
+                                        ].map((item, i) => (
+                                             <div key={i} className="relative group">
+                                                  <div className="text-4xl font-bold text-gray-100 mb-4 group-hover:text-orange-50 transition-colors">
+                                                       {item.step}
+                                                  </div>
+                                                  <h3 className="text-lg font-bold text-[#021231] mb-2">{item.title}</h3>
+                                                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                                             </div>
+                                        ))}
+                                   </div>
+                              </div>
+
+                              <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-12 shadow-sm relative overflow-hidden">
+                                   <div className="absolute top-0 right-0 w-32 h-32 bg-orange-50 rounded-bl-full -mr-8 -mt-8" />
+                                   <h2 className="text-2xl font-bold text-[#021231] mb-4 relative z-10">Program Overview</h2>
+                                   <div className="relative z-10">
+                                        <h3 className="text-xl font-semibold text-orange-700 mb-3">Studi Vokasi & Training Industri</h3>
+                                        <p className="text-gray-700 leading-relaxed text-lg">
+                                             Program pendidikan dan pelatihan berbasis praktik di Jerman untuk membangun keterampilan kerja, pengalaman industri, dan kesiapan profesional.
+                                        </p>
+                                   </div>
+                              </div>
 
                               <h2 className="text-2xl font-bold text-[#021231] mb-4">Keunggulan Program</h2>
                               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0 mb-8">

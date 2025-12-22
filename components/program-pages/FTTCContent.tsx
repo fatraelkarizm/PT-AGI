@@ -72,10 +72,52 @@ export default function FTTCContent() {
                          </div>
 
                          <div className="prose prose-lg max-w-none text-gray-700">
-                              <h2 className="text-2xl font-bold text-[#021231] mb-4">Tentang Program</h2>
-                              <p className="mb-6">
-                                   Program FTTC dirancang khusus untuk lulusan SMA/SMK/S1 yang ingin melanjutkan karier di Jerman tanpa harus melalui proses kuliah yang panjang. Kami fokus pada *Vocational Training* (Ausbildung) dan *Direct Hiring* untuk tenaga profesional.
-                              </p>
+                              <div className="mb-16">
+                                   <h2 className="text-2xl font-bold text-[#021231] mb-8">How FTTC Works</h2>
+                                   <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                                        {[
+                                             {
+                                                  step: "01",
+                                                  title: "Language Preparation",
+                                                  desc: "Peserta mengikuti pelatihan bahasa Jerman hingga level A2 di Indonesia sebagai fondasi komunikasi dan kesiapan kerja internasional."
+                                             },
+                                             {
+                                                  step: "02",
+                                                  title: "Cultural Adaptation",
+                                                  desc: "Peserta menjalani program Au Pair selama 12 bulan di Jerman untuk adaptasi bahasa, budaya, dan kehidupan sehari-hari."
+                                             },
+                                             {
+                                                  step: "03",
+                                                  title: "Career Transition",
+                                                  desc: "Mulai bulan ke-13, peserta bertransisi ke jalur karier sebagai perawat di Jerman sesuai jalur yang telah dipersiapkan sejak awal."
+                                             },
+                                             {
+                                                  step: "04",
+                                                  title: "Professional Career",
+                                                  desc: "Peserta membangun karier profesional yang berkelanjutan di Jerman secara legal dan terarah."
+                                             }
+                                        ].map((item, i) => (
+                                             <div key={i} className="relative group">
+                                                  <div className="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-50 transition-colors">
+                                                       {item.step}
+                                                  </div>
+                                                  <h3 className="text-lg font-bold text-[#021231] mb-2">{item.title}</h3>
+                                                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                                             </div>
+                                        ))}
+                                   </div>
+                              </div>
+
+                              <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-12 shadow-sm relative overflow-hidden">
+                                   <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-full -mr-8 -mt-8" />
+                                   <h2 className="text-2xl font-bold text-[#021231] mb-4 relative z-10">Program Overview</h2>
+                                   <div className="relative z-10">
+                                        <h3 className="text-xl font-semibold text-[#CD1E1A] mb-3">Fast Track to Career (FTTC)</h3>
+                                        <p className="text-gray-700 leading-relaxed text-lg">
+                                             Program jalur percepatan karier internasional bagi mahasiswa dan alumni D3/S1 Keperawatan serta S1 Kebidanan untuk membangun karier profesional di Jerman secara legal dan terarah.
+                                        </p>
+                                   </div>
+                              </div>
 
                               <h2 className="text-2xl font-bold text-[#021231] mb-4">Benefit Bergabung</h2>
                               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0 mb-8">

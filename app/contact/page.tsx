@@ -2,7 +2,7 @@ import Contact from '@/components/Contact';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-     title: 'Hubungi Kami - PT AGI',
+     title: 'Konsultasi Karier Internasional | PT AGI',
      description: 'Konsultasikan kebutuhan karier dan pendidikan internasional Anda bersama tim ahli kami.',
 };
 

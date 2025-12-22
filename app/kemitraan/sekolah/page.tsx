@@ -3,7 +3,7 @@ import { generateMetadata as generateSEOMetadata } from "@/lib/seo";
 import SekolahContent from "@/components/kemitraan-pages/SekolahContent";
 
 export const metadata: Metadata = generateSEOMetadata({
-     title: "Partnership Sekolah (SMK/SMA) - PT AGI",
+     title: "Mitra Sekolah (SMA/SMK) | PT AGI",
      description: "Program kemitraan untuk SMK dan SMA. Persiapkan lulusan untuk Ausbildung dan kuliah vokasi di Jerman. Kurikulum bahasa, pelatihan guru, dan jalur khusus.",
      keywords: [
           "kerjasama smk jerman",

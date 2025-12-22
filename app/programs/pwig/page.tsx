@@ -72,11 +72,52 @@ export default function PWIGPage() {
                          </div>
 
                          <div className="prose prose-lg max-w-none text-gray-700">
-                              <h2 className="text-2xl font-bold text-[#021231] mb-4">Deskripsi Program</h2>
-                              <p className="mb-6">
-                                   PWIG ditujukan bagi perawat (Nurses), insinyur (Engineers), dan spesialis IT yang sudah memiliki pengalaman kerja. Kami memfasilitasi penyetaraan
-                                   ijazah (Anerkennung), kursus bahasa hingga level B2/C1, dan wawancara langsung dengan *employer* Jerman.
-                              </p>
+                              <div className="mb-16">
+                                   <h2 className="text-2xl font-bold text-[#021231] mb-8">How PWIG Works</h2>
+                                   <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                                        {[
+                                             {
+                                                  step: "01",
+                                                  title: "Language Readiness",
+                                                  desc: "Persiapan bahasa Jerman di Indonesia sesuai standar komunikasi dunia kerja profesional."
+                                             },
+                                             {
+                                                  step: "02",
+                                                  title: "Administrative Process",
+                                                  desc: "Pendampingan proses administrasi dan legalitas kerja sesuai regulasi ketenagakerjaan Jerman."
+                                             },
+                                             {
+                                                  step: "03",
+                                                  title: "Job Placement",
+                                                  desc: "Peserta ditempatkan langsung di perusahaan Jerman sesuai bidang dan kompetensi."
+                                             },
+                                             {
+                                                  step: "04",
+                                                  title: "Career Development",
+                                                  desc: "Peserta menjalani karier profesional dengan kontrak resmi dan peluang pengembangan jangka panjang."
+                                             }
+                                        ].map((item, i) => (
+                                             <div key={i} className="relative group">
+                                                  <div className="text-4xl font-bold text-gray-100 mb-4 group-hover:text-blue-50 transition-colors">
+                                                       {item.step}
+                                                  </div>
+                                                  <h3 className="text-lg font-bold text-[#021231] mb-2">{item.title}</h3>
+                                                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                                             </div>
+                                        ))}
+                                   </div>
+                              </div>
+
+                              <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-12 shadow-sm relative overflow-hidden">
+                                   <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -mr-8 -mt-8" />
+                                   <h2 className="text-2xl font-bold text-[#021231] mb-4 relative z-10">Program Overview</h2>
+                                   <div className="relative z-10">
+                                        <h3 className="text-xl font-semibold text-blue-700 mb-3">Professional Worker in Germany (PWIG)</h3>
+                                        <p className="text-gray-700 leading-relaxed text-lg">
+                                             Program penempatan kerja internasional bagi tenaga profesional dan lulusan siap kerja untuk bekerja secara legal di Jerman sesuai bidang dan kompetensinya.
+                                        </p>
+                                   </div>
+                              </div>
 
                               <h2 className="text-2xl font-bold text-[#021231] mb-4">Sektor Pekerjaan Utama</h2>
                               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0 mb-8">

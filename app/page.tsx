@@ -8,7 +8,7 @@ import { generateMetadata as generateSEOMetadata, generateOrganizationSchema, ge
 import { Metadata } from "next";
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: "Mitra Karier Internasional Terpercaya",
+  title: "Mitra Karier Internasional | PT AGI",
   description: "PT Akselerasi Global Indonesia - Wujudkan impian karier dan pendidikan global Anda. Program legal ke Jerman, USA, Belgia, dan China dengan bimbingan intensif.",
   keywords: [
     "karier internasional indonesia",
