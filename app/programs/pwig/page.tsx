@@ -2,9 +2,33 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { CheckCircle, Clock, MapPin, DollarSign, Wallet } from "lucide-react";
+import Link from "next/link";
+import { CheckCircle, Clock, MapPin, DollarSign, Wallet, Languages, FileText, Building, TrendingUp } from "lucide-react";
 
 export default function PWIGPage() {
+     const steps = [
+          {
+               title: "Language Readiness",
+               desc: "Persiapan bahasa Jerman di Indonesia sesuai standar komunikasi dunia kerja profesional.",
+               icon: Languages
+          },
+          {
+               title: "Administrative Process",
+               desc: "Pendampingan proses administrasi dan legalitas kerja sesuai regulasi ketenagakerjaan Jerman.",
+               icon: FileText
+          },
+          {
+               title: "Job Placement",
+               desc: "Peserta ditempatkan langsung di perusahaan Jerman sesuai bidang dan kompetensi.",
+               icon: Building
+          },
+          {
+               title: "Career Development",
+               desc: "Peserta menjalani karier profesional dengan kontrak resmi dan peluang pengembangan jangka panjang.",
+               icon: TrendingUp
+          }
+     ];
+
      return (
           <main className="min-h-screen bg-white font-sans pt-24 pb-12">
                <div className="container mx-auto px-4 md:px-6 relative z-10 h-full">
@@ -36,17 +60,17 @@ export default function PWIGPage() {
 
                          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                   <Clock className="w-8 h-8 text-[#CD1E1A] mb-4" />
+                                   <Clock className="w-8 h-8 text-blue-600 mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Kontrak Kerja</h3>
                                    <p className="text-gray-600">Min. 2 Tahun</p>
                               </div>
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                   <MapPin className="w-8 h-8 text-[#CD1E1A] mb-4" />
+                                   <MapPin className="w-8 h-8 text-blue-600 mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Penempatan</h3>
                                    <p className="text-gray-600">Seluruh Jerman</p>
                               </div>
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                   <DollarSign className="w-8 h-8 text-[#CD1E1A] mb-4" />
+                                   <DollarSign className="w-8 h-8 text-blue-600 mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Gaji Tahunan</h3>
                                    <p className="text-gray-600">€35,000 - €55,000</p>
                               </div>
@@ -71,97 +95,83 @@ export default function PWIGPage() {
                               </div>
                          </div>
 
-                         <div className="prose prose-lg max-w-none text-gray-700">
-                              <div className="mb-16">
-                                   <h2 className="text-2xl font-bold text-[#021231] mb-8">How PWIG Works</h2>
-                                   <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                                        {[
-                                             {
-                                                  step: "01",
-                                                  title: "Language Readiness",
-                                                  desc: "Persiapan bahasa Jerman di Indonesia sesuai standar komunikasi dunia kerja profesional."
-                                             },
-                                             {
-                                                  step: "02",
-                                                  title: "Administrative Process",
-                                                  desc: "Pendampingan proses administrasi dan legalitas kerja sesuai regulasi ketenagakerjaan Jerman."
-                                             },
-                                             {
-                                                  step: "03",
-                                                  title: "Job Placement",
-                                                  desc: "Peserta ditempatkan langsung di perusahaan Jerman sesuai bidang dan kompetensi."
-                                             },
-                                             {
-                                                  step: "04",
-                                                  title: "Career Development",
-                                                  desc: "Peserta menjalani karier profesional dengan kontrak resmi dan peluang pengembangan jangka panjang."
-                                             }
-                                        ].map((item, i) => (
-                                             <div key={i} className="relative group">
-                                                  <div className="text-4xl font-bold text-gray-100 mb-4 group-hover:text-blue-50 transition-colors">
-                                                       {item.step}
+                         {/* How It Works - Static Grid */}
+                         <div className="mb-20">
+                              <div className="text-center mb-10">
+                                   <h2 className="text-3xl font-bold text-[#021231] mb-4">How PWIG Works</h2>
+                                   <p className="text-gray-600 max-w-2xl mx-auto">
+                                        Langkah strategis menuju karier profesional di Jerman.
+                                   </p>
+                              </div>
+
+                              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                                   {steps.map((step, index) => (
+                                        <div key={index} className="p-6 rounded-2xl border border-gray-100 bg-white hover:border-blue-100 hover:shadow-lg transition-all duration-300 group">
+                                             <div className="flex justify-between items-start mb-4">
+                                                  <div className="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                                       <step.icon className="w-6 h-6" />
                                                   </div>
-                                                  <h3 className="text-lg font-bold text-[#021231] mb-2">{item.title}</h3>
-                                                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                                                  <span className="text-4xl font-bold text-gray-200 group-hover:text-blue-50 transition-colors">
+                                                       0{index + 1}
+                                                  </span>
                                              </div>
-                                        ))}
-                                   </div>
-                              </div>
-
-                              <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-12 shadow-sm relative overflow-hidden">
-                                   <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -mr-8 -mt-8" />
-                                   <h2 className="text-2xl font-bold text-[#021231] mb-4 relative z-10">Program Overview</h2>
-                                   <div className="relative z-10">
-                                        <h3 className="text-xl font-semibold text-blue-700 mb-3">Professional Worker in Germany (PWIG)</h3>
-                                        <p className="text-gray-700 leading-relaxed text-lg">
-                                             Program penempatan kerja internasional bagi tenaga profesional dan lulusan siap kerja untuk bekerja secara legal di Jerman sesuai bidang dan kompetensinya.
-                                        </p>
-                                   </div>
-                              </div>
-
-                              <h2 className="text-2xl font-bold text-[#021231] mb-4">Sektor Pekerjaan Utama</h2>
-                              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0 mb-8">
-                                   {[
-                                        "Kesehatan (Perawat & Dokter)",
-                                        "Teknik (Mesin, Elektro, Sipil)",
-                                        "Teknologi Informasi & Software",
-                                        "Hospitality & Gastronomy",
-                                        "Logistik & Transportasi",
-                                        "Konstruksi"
-                                   ].map((item, i) => (
-                                        <li key={i} className="flex items-center gap-3">
-                                             <CheckCircle className="w-5 h-5 text-green-500 shrink-0" />
-                                             <span>{item}</span>
-                                        </li>
+                                             <h3 className="text-lg font-bold text-[#021231] mb-3 group-hover:text-blue-600 transition-colors">
+                                                  {step.title}
+                                             </h3>
+                                             <p className="text-sm text-gray-600 leading-relaxed">
+                                                  {step.desc}
+                                             </p>
+                                        </div>
                                    ))}
-                              </ul>
-
-                              <h2 className="text-2xl font-bold text-[#021231] mb-4">Benefit Bergabung</h2>
-                              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0 mb-8">
-                                   {[
-                                        "Gaji Standar Eropa (€2500 - €4500)",
-                                        "Fasilitas Dana Talangan / Bantuan Bergulir hingga 70%",
-                                        "Kontrak Kerja Jangka Panjang",
-                                        "Jaminan Asuransi & Pensiun",
-                                        "Izin Tinggal untuk Keluarga (Reunifikasi)",
-                                        "Cuti Tahunan Berbayar (24-30 hari)"
-                                   ].map((item, i) => (
-                                        <li key={i} className="flex items-center gap-3">
-                                             <CheckCircle className="w-5 h-5 text-green-500 shrink-0" />
-                                             <span>{item}</span>
-                                        </li>
-                                   ))}
-                              </ul>
+                              </div>
                          </div>
+
+                         <h2 className="text-2xl font-bold text-[#021231] mb-4">Sektor Pekerjaan Utama</h2>
+                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0 mb-8">
+                              {[
+                                   "Kesehatan (Perawat & Dokter)",
+                                   "Teknik (Mesin, Elektro, Sipil)",
+                                   "Teknologi Informasi & Software",
+                                   "Hospitality & Gastronomy",
+                                   "Logistik & Transportasi",
+                                   "Konstruksi"
+                              ].map((item, i) => (
+                                   <li key={i} className="flex items-center gap-3">
+                                        <CheckCircle className="w-5 h-5 text-green-500 shrink-0" />
+                                        <span className="text-gray-900 font-medium">{item}</span>
+                                   </li>
+                              ))}
+                         </ul>
+
+                         <h2 className="text-2xl font-bold text-[#021231] mb-4">Benefit Bergabung</h2>
+                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0 mb-8">
+                              {[
+                                   "Gaji Standar Eropa (€2500 - €4500)",
+                                   "Fasilitas Dana Talangan / Bantuan Bergulir hingga 70%",
+                                   "Kontrak Kerja Jangka Panjang",
+                                   "Jaminan Asuransi & Pensiun",
+                                   "Izin Tinggal untuk Keluarga (Reunifikasi)",
+                                   "Cuti Tahunan Berbayar (24-30 hari)"
+                              ].map((item, i) => (
+                                   <li key={i} className="flex items-center gap-3">
+                                        <CheckCircle className="w-5 h-5 text-green-500 shrink-0" />
+                                        <span className="text-gray-900 font-medium">{item}</span>
+                                   </li>
+                              ))}
+                         </ul>
 
                          <div className="mt-12 p-8 bg-[#021231] rounded-3xl text-white text-center">
                               <h2 className="text-2xl font-bold mb-4">Tingkatkan Level Karier Anda</h2>
                               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                                    Jerman membutuhkan ribuan tenaga ahli setiap tahunnya. Pastikan Anda salah satunya dengan persiapan yang tepat.
                               </p>
-                              <button className="px-8 py-4 bg-[#CD1E1A] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-red-600/50 transition-all hover:scale-105">
+                              <Link
+                                   href="https://wa.me/6282342756169?text=Halo%20Admin%20PT%20AGI,%20saya%20tertarik%20dengan%20program%20PWIG"
+                                   target="_blank"
+                                   className="inline-block px-8 py-4 bg-[#CD1E1A] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-red-600/50 transition-all hover:scale-105"
+                              >
                                    Submit CV Saya
-                              </button>
+                              </Link>
                          </div>
                     </motion.div>
                </div>

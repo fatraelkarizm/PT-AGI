@@ -2,9 +2,33 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight, CheckCircle, Clock, MapPin, DollarSign, Calendar, Wallet } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, CheckCircle, Clock, MapPin, DollarSign, Calendar, Wallet, BookOpen, Users, Stethoscope, TrendingUp } from "lucide-react";
 
 export default function FTTCContent() {
+     const steps = [
+          {
+               title: "Language Preparation",
+               desc: "Peserta mengikuti pelatihan bahasa Jerman hingga level A2 di Indonesia sebagai fondasi komunikasi dan kesiapan kerja internasional.",
+               icon: BookOpen
+          },
+          {
+               title: "Cultural Adaptation",
+               desc: "Peserta menjalani program Au Pair selama 12 bulan di Jerman untuk adaptasi bahasa, budaya, dan kehidupan sehari-hari.",
+               icon: Users
+          },
+          {
+               title: "Career Transition",
+               desc: "Mulai bulan ke-13, peserta bertransisi ke jalur karier sebagai perawat di Jerman sesuai jalur yang telah dipersiapkan sejak awal.",
+               icon: Stethoscope
+          },
+          {
+               title: "Professional Career",
+               desc: "Peserta membangun karier profesional yang berkelanjutan di Jerman secara legal dan terarah.",
+               icon: TrendingUp
+          }
+     ];
+
      return (
           <main className="min-h-screen bg-white font-sans pt-24 pb-12">
                <div className="container mx-auto px-4 md:px-6 relative z-10 h-full">
@@ -14,7 +38,7 @@ export default function FTTCContent() {
                          className="max-w-5xl mx-auto"
                     >
                          <div className="mb-8">
-                              <span className="inline-block px-4 py-1.5 rounded-full bg-red-100 text-[#CD1E1A] font-medium text-sm mb-4">
+                              <span className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 font-medium text-sm mb-4">
                                    Program Unggulan
                               </span>
                               <h1 className="text-4xl md:text-5xl font-bold text-[#021231] mb-6">
@@ -36,17 +60,17 @@ export default function FTTCContent() {
 
                          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                   <Clock className="w-8 h-8 text-[#CD1E1A] mb-4" />
+                                   <Clock className="w-8 h-8 text-blue-600 mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Durasi Program</h3>
                                    <p className="text-gray-600">6 - 9 Bulan Intensif</p>
                               </div>
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                   <MapPin className="w-8 h-8 text-[#CD1E1A] mb-4" />
+                                   <MapPin className="w-8 h-8 text-blue-600 mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Lokasi Tujuan</h3>
                                    <p className="text-gray-600">Jerman (Berlin, Munich, Hamburg)</p>
                               </div>
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                   <DollarSign className="w-8 h-8 text-[#CD1E1A] mb-4" />
+                                   <DollarSign className="w-8 h-8 text-blue-600 mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Potensi Gaji</h3>
                                    <p className="text-gray-600">€2000 - €3500 / Bulan</p>
                               </div>
@@ -71,80 +95,66 @@ export default function FTTCContent() {
                               </div>
                          </div>
 
-                         <div className="prose prose-lg max-w-none text-gray-700">
-                              <div className="mb-16">
-                                   <h2 className="text-2xl font-bold text-[#021231] mb-8">How FTTC Works</h2>
-                                   <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                                        {[
-                                             {
-                                                  step: "01",
-                                                  title: "Language Preparation",
-                                                  desc: "Peserta mengikuti pelatihan bahasa Jerman hingga level A2 di Indonesia sebagai fondasi komunikasi dan kesiapan kerja internasional."
-                                             },
-                                             {
-                                                  step: "02",
-                                                  title: "Cultural Adaptation",
-                                                  desc: "Peserta menjalani program Au Pair selama 12 bulan di Jerman untuk adaptasi bahasa, budaya, dan kehidupan sehari-hari."
-                                             },
-                                             {
-                                                  step: "03",
-                                                  title: "Career Transition",
-                                                  desc: "Mulai bulan ke-13, peserta bertransisi ke jalur karier sebagai perawat di Jerman sesuai jalur yang telah dipersiapkan sejak awal."
-                                             },
-                                             {
-                                                  step: "04",
-                                                  title: "Professional Career",
-                                                  desc: "Peserta membangun karier profesional yang berkelanjutan di Jerman secara legal dan terarah."
-                                             }
-                                        ].map((item, i) => (
-                                             <div key={i} className="relative group">
-                                                  <div className="text-4xl font-bold text-gray-100 mb-4 group-hover:text-red-50 transition-colors">
-                                                       {item.step}
+                         {/* How It Works - Static Grid */}
+                         <div className="mb-20">
+                              <div className="text-center mb-10">
+                                   <h2 className="text-3xl font-bold text-[#021231] mb-4">How FTTC Works</h2>
+                                   <p className="text-gray-600 max-w-2xl mx-auto">
+                                        Ikuti langkah mudah ini untuk memulai perjalanan karier internasional Anda bersama kami.
+                                   </p>
+                              </div>
+
+                              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                                   {steps.map((step, index) => (
+                                        <div key={index} className="p-6 rounded-2xl border border-gray-100 bg-white hover:border-blue-100 hover:shadow-lg transition-all duration-300 group">
+                                             <div className="flex justify-between items-start mb-4">
+                                                  <div className="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                                       <step.icon className="w-6 h-6" />
                                                   </div>
-                                                  <h3 className="text-lg font-bold text-[#021231] mb-2">{item.title}</h3>
-                                                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                                                  <span className="text-4xl font-bold text-gray-200 group-hover:text-blue-50 transition-colors">
+                                                       0{index + 1}
+                                                  </span>
                                              </div>
-                                        ))}
-                                   </div>
-                              </div>
-
-                              <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-12 shadow-sm relative overflow-hidden">
-                                   <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-full -mr-8 -mt-8" />
-                                   <h2 className="text-2xl font-bold text-[#021231] mb-4 relative z-10">Program Overview</h2>
-                                   <div className="relative z-10">
-                                        <h3 className="text-xl font-semibold text-[#CD1E1A] mb-3">Fast Track to Career (FTTC)</h3>
-                                        <p className="text-gray-700 leading-relaxed text-lg">
-                                             Program jalur percepatan karier internasional bagi mahasiswa dan alumni D3/S1 Keperawatan serta S1 Kebidanan untuk membangun karier profesional di Jerman secara legal dan terarah.
-                                        </p>
-                                   </div>
-                              </div>
-
-                              <h2 className="text-2xl font-bold text-[#021231] mb-4">Benefit Bergabung</h2>
-                              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0 mb-8">
-                                   {[
-                                        "Pelatihan Bahasa Jerman Intensif (A1-B2)",
-                                        "Pengurusan Visa & Dokumen Legal",
-                                        "Penempatan Kerja Terjamin",
-                                        "Akomodasi & Tempat Tinggal di Jerman",
-                                        "Mentoring Budaya & Adaptasi",
-                                        "Sertifikat Kompetensi Internasional"
-                                   ].map((item, i) => (
-                                        <li key={i} className="flex items-center gap-3">
-                                             <CheckCircle className="w-5 h-5 text-green-500 shrink-0" />
-                                             <span>{item}</span>
-                                        </li>
+                                             <h3 className="text-lg font-bold text-[#021231] mb-3 group-hover:text-blue-600 transition-colors">
+                                                  {step.title}
+                                             </h3>
+                                             <p className="text-sm text-gray-600 leading-relaxed">
+                                                  {step.desc}
+                                             </p>
+                                        </div>
                                    ))}
-                              </ul>
+                              </div>
                          </div>
+
+                         <h2 className="text-2xl font-bold text-[#021231] mb-4">Benefit Bergabung</h2>
+                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0 mb-8">
+                              {[
+                                   "Pelatihan Bahasa Jerman Intensif (A1-B2)",
+                                   "Pengurusan Visa & Dokumen Legal",
+                                   "Penempatan Kerja Terjamin",
+                                   "Akomodasi & Tempat Tinggal di Jerman",
+                                   "Mentoring Budaya & Adaptasi",
+                                   "Sertifikat Kompetensi Internasional"
+                              ].map((item, i) => (
+                                   <li key={i} className="flex items-center gap-3">
+                                        <CheckCircle className="w-5 h-5 text-green-600 shrink-0" />
+                                        <span className="text-gray-900 font-medium">{item}</span>
+                                   </li>
+                              ))}
+                         </ul>
 
                          <div className="mt-12 p-8 bg-[#021231] rounded-3xl text-white text-center">
                               <h2 className="text-2xl font-bold mb-4">Siap Memulai Karier Globalmu?</h2>
                               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                                    Jangan lewatkan kesempatan emas ini. Kuota terbatas untuk batch mendatang. Konsultasikan profilmu sekarang secara gratis.
                               </p>
-                              <button className="px-8 py-4 bg-[#CD1E1A] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-red-600/50 transition-all hover:scale-105">
+                              <Link
+                                   href="https://wa.me/6282342756169?text=Halo%20Admin%20PT%20AGI,%20saya%20tertarik%20dengan%20program%20FTTC"
+                                   target="_blank"
+                                   className="inline-block px-8 py-4 bg-[#CD1E1A] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-red-600/50 transition-all hover:scale-105"
+                              >
                                    Daftar Konsultasi Sekarang
-                              </button>
+                              </Link>
                          </div>
                     </motion.div>
                </div>

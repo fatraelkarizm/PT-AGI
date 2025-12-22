@@ -143,13 +143,18 @@ export default function Navbar() {
 
                     {/* CTA Button */}
                     <div className="hidden lg:block">
-                         <motion.button
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                              className="bg-[#CD1E1A] text-white px-6 py-2.5 rounded-full font-semibold shadow-lg hover:shadow-red-500/30 transition-shadow"
+                         <Link
+                              href="https://wa.me/6282342756169?text=Halo%20Admin%20PT%20AGI,%20saya%20ingin%20konsultasi"
+                              target="_blank"
                          >
-                              Konsultasi Gratis
-                         </motion.button>
+                              <motion.button
+                                   whileHover={{ scale: 1.05 }}
+                                   whileTap={{ scale: 0.95 }}
+                                   className="bg-[#CD1E1A] text-white px-6 py-2.5 rounded-full font-semibold shadow-lg hover:shadow-red-500/30 transition-shadow"
+                              >
+                                   Konsultasi Gratis
+                              </motion.button>
+                         </Link>
                     </div>
 
                     {/* Mobile Menu Toggle */}
@@ -222,9 +227,15 @@ export default function Navbar() {
                                              {link.label}
                                         </Link>
                                    ))}
-                                   <button className="bg-[#CD1E1A] text-white w-full py-3 rounded-xl font-bold mt-4">
-                                        Konsultasi Gratis
-                                   </button>
+                                   <Link
+                                        href="https://wa.me/6282342756169?text=Halo%20Admin%20PT%20AGI,%20saya%20ingin%20konsultasi"
+                                        target="_blank"
+                                        className="block w-full"
+                                   >
+                                        <button className="bg-[#CD1E1A] text-white w-full py-3 rounded-xl font-bold mt-4">
+                                             Konsultasi Gratis
+                                        </button>
+                                   </Link>
                               </div>
                          </motion.div>
                     )}

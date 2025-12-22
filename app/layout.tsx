@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Akselerasi Global Indonesia | PT AGI",
   description: "Bangun Karier Internasional Secara Legal & Terarah with PT AGI.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png"
+  }
 };
 
 export default function RootLayout({
