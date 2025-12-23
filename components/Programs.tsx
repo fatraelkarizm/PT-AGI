@@ -9,21 +9,10 @@ import {
      AGILogo,
      CulturalExchange,
      HotelPria,
-     IAPAText,
      Nurse,
      TeamDoctor,
-     YAIJFoundation,
-     YAIJLogo,
 } from "@/assets";
-import { div } from "framer-motion/client";
 
-// Placeholder Partners (Can be replaced with real logos later)
-const PARTNERS = [
-     { name: "Partner 1", logo: "https://placehold.co/150x50/e2e8f0/475569?text=Partner+1" },
-     { name: "Partner 2", logo: "https://placehold.co/150x50/e2e8f0/475569?text=Partner+2" },
-     { name: "Partner 3", logo: "https://placehold.co/150x50/e2e8f0/475569?text=Partner+3" },
-     { name: "Partner 4", logo: "https://placehold.co/150x50/e2e8f0/475569?text=Partner+4" },
-];
 
 const PROGRAMS = [
      {
