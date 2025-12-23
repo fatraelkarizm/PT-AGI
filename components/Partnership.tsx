@@ -264,10 +264,12 @@ export default function Partnership() {
                     {/* Footer/Trust Indicators */}
                     <div className="text-center">
                          <p className="text-sm text-gray-500 mb-6 font-medium">Dipercaya oleh institusi pendidikan terkemuka di Indonesia</p>
-                         <div className="flex flex-wrap justify-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                              <Building2 size={32} />
-                              <School size={32} />
-                              <Globe size={32} />
+                         <div className="flex flex-wrap justify-center gap-8 items-center">
+                              <div className="flex gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                                   <Building2 size={32} />
+                                   <School size={32} />
+                                   <Globe size={32} />
+                              </div>
                               <AwardBadge />
                          </div>
                     </div>
