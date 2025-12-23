@@ -2,9 +2,32 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { CheckCircle, Clock, MapPin, Briefcase } from "lucide-react";
+import { CheckCircle, Clock, MapPin, Briefcase, ClipboardList, Languages, FileCheck, Plane } from "lucide-react";
 
 export default function VokasiContent() {
+     const steps = [
+          {
+               title: "Registration",
+               desc: "Pendaftaran dan seleksi administrasi untuk menentukan kelayakan peserta program Ausbildung.",
+               icon: ClipboardList
+          },
+          {
+               title: "Language Training",
+               desc: "Pelatihan bahasa Jerman intensif dari level A1 hingga B1 sebagai syarat utama Ausbildung.",
+               icon: Languages
+          },
+          {
+               title: "Contract Signing",
+               desc: "Proses wawancara dengan perusahaan Jerman dan penandatanganan kontrak Ausbildung.",
+               icon: FileCheck
+          },
+          {
+               title: "Visa & Departure",
+               desc: "Pengurusan visa studi/kerja dan persiapan keberangkatan menuju Jerman.",
+               icon: Plane
+          }
+     ];
+
      return (
           <main className="min-h-screen bg-white font-sans pt-24 pb-12">
                <div className="container mx-auto px-4 md:px-6">
@@ -36,17 +59,17 @@ export default function VokasiContent() {
 
                          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                   <Clock className="w-8 h-8 text-[#CD1E1A] mb-4" />
+                                   <Clock className="w-8 h-8 text-orange-600 mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Program</h3>
                                    <p className="text-gray-600">Ausbildung Gastronomi</p>
                               </div>
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                   <MapPin className="w-8 h-8 text-[#CD1E1A] mb-4" />
+                                   <MapPin className="w-8 h-8 text-orange-600 mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Lokasi Kelas</h3>
                                    <p className="text-gray-600">Jogja, Ambon, Makassar</p>
                               </div>
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                   <Briefcase className="w-8 h-8 text-[#CD1E1A] mb-4" />
+                                   <Briefcase className="w-8 h-8 text-orange-600 mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Target</h3>
                                    <p className="text-gray-600">SMA/SMK & Kampus</p>
                               </div>
@@ -89,6 +112,35 @@ export default function VokasiContent() {
                                         </li>
                                    ))}
                               </ul>
+
+                              <div className="mb-20">
+                                   <div className="text-center mb-10">
+                                        <h2 className="text-3xl font-bold text-[#021231] mb-4">How It Works</h2>
+                                        <p className="text-gray-600 max-w-2xl mx-auto">
+                                             Langkah mudah memulai pendidikan vokasi internasional Anda.
+                                        </p>
+                                   </div>
+                                   <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                                        {steps.map((step, index) => (
+                                             <div key={index} className="p-6 rounded-2xl border border-gray-100 bg-white hover:border-orange-100 hover:shadow-lg transition-all duration-300 group">
+                                                  <div className="flex justify-between items-start mb-4">
+                                                       <div className="p-3 rounded-xl bg-orange-50 text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                                                            <step.icon className="w-6 h-6" />
+                                                       </div>
+                                                       <span className="text-4xl font-bold text-gray-200 group-hover:text-orange-50 transition-colors">
+                                                            0{index + 1}
+                                                       </span>
+                                                  </div>
+                                                  <h3 className="text-lg font-bold text-[#021231] mb-3 group-hover:text-orange-600 transition-colors">
+                                                       {step.title}
+                                                  </h3>
+                                                  <p className="text-sm text-gray-600 leading-relaxed">
+                                                       {step.desc}
+                                                  </p>
+                                             </div>
+                                        ))}
+                                   </div>
+                              </div>
                          </div>
 
                          <div className="mt-12 p-8 bg-[#021231] rounded-3xl text-white text-center">

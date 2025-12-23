@@ -2,9 +2,32 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { CheckCircle, Clock, MapPin, DollarSign } from "lucide-react";
+import { CheckCircle, Clock, MapPin, DollarSign, FileText, Languages, Video, Plane } from "lucide-react";
 
 export default function PWIGContent() {
+     const steps = [
+          {
+               title: "Document Assessment",
+               desc: "Evaluasi kualifikasi pendidikan dan pengalaman kerja untuk penyetaraan (Anerkennung) di Jerman.",
+               icon: FileText
+          },
+          {
+               title: "Language & Training",
+               desc: "Persiapan bahasa Jerman minimal level B1/B2 (jika diperlukan) dan pengenalan budaya kerja.",
+               icon: Languages
+          },
+          {
+               title: "Interview & Matching",
+               desc: "Sesi wawancara langsung dengan employer Jerman yang difasilitasi oleh PT AGI.",
+               icon: Video
+          },
+          {
+               title: "Visa & Departure",
+               desc: "Pengurusan visa kerja, kontrak, dan keberangkatan menuju Jerman untuk memulai karier.",
+               icon: Plane
+          }
+     ];
+
      return (
           <main className="min-h-screen bg-white font-sans pt-24 pb-12">
                <div className="container mx-auto px-4 md:px-6">
@@ -36,17 +59,17 @@ export default function PWIGContent() {
 
                          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                   <Clock className="w-8 h-8 text-[#CD1E1A] mb-4" />
+                                   <Clock className="w-8 h-8 text-blue-600 mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Kontrak Kerja</h3>
                                    <p className="text-gray-600">Min. 2 Tahun</p>
                               </div>
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                   <MapPin className="w-8 h-8 text-[#CD1E1A] mb-4" />
+                                   <MapPin className="w-8 h-8 text-blue-600 mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Penempatan</h3>
                                    <p className="text-gray-600">Jerman</p>
                               </div>
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                   <DollarSign className="w-8 h-8 text-[#CD1E1A] mb-4" />
+                                   <DollarSign className="w-8 h-8 text-blue-600 mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Gaji Tahunan</h3>
                                    <p className="text-gray-600">€35,000 - €55,000</p>
                               </div>
@@ -81,6 +104,35 @@ export default function PWIGContent() {
                                         </li>
                                    ))}
                               </ul>
+
+                              <div className="mb-20">
+                                   <div className="text-center mb-10">
+                                        <h2 className="text-3xl font-bold text-[#021231] mb-4">How PWIG Works</h2>
+                                        <p className="text-gray-600 max-w-2xl mx-auto">
+                                             Alur proses kami yang transparan untuk memastikan kesuksesan karier Anda.
+                                        </p>
+                                   </div>
+                                   <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                                        {steps.map((step, index) => (
+                                             <div key={index} className="p-6 rounded-2xl border border-gray-100 bg-white hover:border-blue-100 hover:shadow-lg transition-all duration-300 group">
+                                                  <div className="flex justify-between items-start mb-4">
+                                                       <div className="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                                            <step.icon className="w-6 h-6" />
+                                                       </div>
+                                                       <span className="text-4xl font-bold text-gray-200 group-hover:text-blue-50 transition-colors">
+                                                            0{index + 1}
+                                                       </span>
+                                                  </div>
+                                                  <h3 className="text-lg font-bold text-[#021231] mb-3 group-hover:text-blue-600 transition-colors">
+                                                       {step.title}
+                                                  </h3>
+                                                  <p className="text-sm text-gray-600 leading-relaxed">
+                                                       {step.desc}
+                                                  </p>
+                                             </div>
+                                        ))}
+                                   </div>
+                              </div>
                          </div>
 
                          <div className="mt-12 p-8 bg-[#021231] rounded-3xl text-white text-center">

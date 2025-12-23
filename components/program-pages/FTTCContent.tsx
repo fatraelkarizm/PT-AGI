@@ -39,7 +39,7 @@ export default function FTTCContent() {
                          className="max-w-5xl mx-auto"
                     >
                          <div className="mb-8">
-                              <span className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 font-medium text-sm mb-4">
+                              <span className="inline-block px-4 py-1.5 rounded-full bg-teal-100 text-teal-700 font-medium text-sm mb-4">
                                    Program Unggulan
                               </span>
                               <h1 className="text-4xl md:text-5xl font-bold text-[#021231] mb-6">
@@ -61,17 +61,17 @@ export default function FTTCContent() {
 
                          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                   <Clock className="w-8 h-8 text-blue-600 mb-4" />
+                                   <Clock className="w-8 h-8 text-teal-600 mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Durasi Program</h3>
                                    <p className="text-gray-600">6 - 9 Bulan Intensif</p>
                               </div>
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                   <MapPin className="w-8 h-8 text-blue-600 mb-4" />
+                                   <MapPin className="w-8 h-8 text-teal-600 mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Lokasi Tujuan</h3>
                                    <p className="text-gray-600">Jerman</p>
                               </div>
                               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                   <DollarSign className="w-8 h-8 text-blue-600 mb-4" />
+                                   <DollarSign className="w-8 h-8 text-teal-600 mb-4" />
                                    <h3 className="font-bold text-lg text-[#021231] mb-2">Potensi Gaji</h3>
                                    <p className="text-gray-600">€2000 - €3500 / Bulan</p>
                               </div>
@@ -95,11 +95,40 @@ export default function FTTCContent() {
                                    "Sertifikat Kompetensi Internasional"
                               ].map((item, i) => (
                                    <li key={i} className="flex items-center gap-3">
-                                        <CheckCircle className="w-5 h-5 text-green-600 shrink-0" />
+                                        <CheckCircle className="w-5 h-5 text-teal-600 shrink-0" />
                                         <span className="text-gray-900 font-medium">{item}</span>
                                    </li>
                               ))}
                          </ul>
+
+                         <div className="mb-20">
+                              <div className="text-center mb-10">
+                                   <h2 className="text-3xl font-bold text-[#021231] mb-4">How FTTC Works</h2>
+                                   <p className="text-gray-600 max-w-2xl mx-auto">
+                                        Perjalanan singkat menuju karier impian Anda di Jerman.
+                                   </p>
+                              </div>
+                              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                                   {steps.map((step, index) => (
+                                        <div key={index} className="p-6 rounded-2xl border border-gray-100 bg-white hover:border-teal-100 hover:shadow-lg transition-all duration-300 group">
+                                             <div className="flex justify-between items-start mb-4">
+                                                  <div className="p-3 rounded-xl bg-teal-50 text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                                                       <step.icon className="w-6 h-6" />
+                                                  </div>
+                                                  <span className="text-4xl font-bold text-gray-200 group-hover:text-teal-50 transition-colors">
+                                                       0{index + 1}
+                                                  </span>
+                                             </div>
+                                             <h3 className="text-lg font-bold text-[#021231] mb-3 group-hover:text-teal-600 transition-colors">
+                                                  {step.title}
+                                             </h3>
+                                             <p className="text-sm text-gray-600 leading-relaxed">
+                                                  {step.desc}
+                                             </p>
+                                        </div>
+                                   ))}
+                              </div>
+                         </div>
 
                          <div className="mt-12 p-8 bg-[#021231] rounded-3xl text-white text-center">
                               <h2 className="text-2xl font-bold mb-4">Siap Memulai Karier Globalmu?</h2>
