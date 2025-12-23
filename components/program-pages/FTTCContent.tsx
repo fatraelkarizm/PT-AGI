@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle, Clock, MapPin, DollarSign, Calendar, Wallet, BookOpen, Users, Stethoscope, TrendingUp } from "lucide-react";
 import { Nurse } from "@/assets";
+import ProgramCTA from "@/components/ProgramCTA";
 
 export default function FTTCContent() {
      const steps = [
@@ -130,19 +131,12 @@ export default function FTTCContent() {
                               </div>
                          </div>
 
-                         <div className="mt-12 p-8 bg-[#021231] rounded-3xl text-white text-center">
-                              <h2 className="text-2xl font-bold mb-4">Siap Memulai Karier Globalmu?</h2>
-                              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                                   Jangan lewatkan kesempatan emas ini. Kuota terbatas untuk batch mendatang. Konsultasikan profilmu sekarang secara gratis.
-                              </p>
-                              <Link
-                                   href="https://wa.me/6282342756169?text=Halo%20Admin%20PT%20AGI,%20saya%20tertarik%20dengan%20program%20FTTC"
-                                   target="_blank"
-                                   className="inline-block px-8 py-4 bg-[#CD1E1A] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-red-600/50 transition-all hover:scale-105"
-                              >
-                                   Daftar Konsultasi Sekarang
-                              </Link>
-                         </div>
+                         <ProgramCTA
+                              title="Siap Memulai Karier Globalmu?"
+                              description="Jangan lewatkan kesempatan emas ini. Kuota terbatas untuk batch mendatang. Konsultasikan profilmu sekarang secara gratis."
+                              buttonText="Daftar Konsultasi Sekarang"
+                              href="https://wa.me/6282342756169?text=Halo%20Admin%20PT%20AGI,%20saya%20tertarik%20dengan%20program%20FTTC"
+                         />
                     </motion.div>
                </div>
           </main>

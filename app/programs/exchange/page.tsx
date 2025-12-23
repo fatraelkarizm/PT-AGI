@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle, Clock, MapPin, DollarSign, BookOpen, Home, Globe, UserCheck } from "lucide-react";
+import ProgramCTA from "@/components/ProgramCTA";
 
 export default function CulturalExchangePage() {
      const steps = [
@@ -33,7 +34,7 @@ export default function CulturalExchangePage() {
                     <motion.div
                          initial={{ opacity: 0, y: 20 }}
                          animate={{ opacity: 1, y: 0 }}
-                         className="max-w-4xl mx-auto"
+                         className="max-w-5xl mx-auto"
                     >
                          <div className="mb-8">
                               <span className="inline-block px-4 py-1.5 rounded-full bg-purple-100 text-purple-700 font-medium text-sm mb-4">
@@ -126,15 +127,12 @@ export default function CulturalExchangePage() {
                                         ))}
                                    </div>
 
-                                   <div className="mt-12 p-8 bg-[#021231] rounded-3xl text-white text-center">
-                                        <h2 className="text-2xl font-bold mb-4">Jelajahi Dunia Sekarang</h2>
-                                        <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                                             Pengalaman sekali seumur hidup menantimu. Dari kebun tulip di Eropa hingga gedung pencakar langit Amerika.
-                                        </p>
-                                        <button className="px-8 py-4 bg-[#CD1E1A] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-red-600/50 transition-all hover:scale-105">
-                                             Daftar Seleksi Sekarang
-                                        </button>
-                                   </div>
+                                   <ProgramCTA
+                                        title="Jelajahi Dunia Sekarang"
+                                        description="Pengalaman sekali seumur hidup menantimu. Dari kebun tulip di Eropa hingga gedung pencakar langit Amerika."
+                                        buttonText="Daftar Seleksi Sekarang"
+                                        href="https://wa.me/6282342756169?text=Halo%20Admin%20PT%20AGI,%20saya%20tertarik%20dengan%20program%20Exchange"
+                                   />
                               </div>
                          </div>
                     </motion.div>
