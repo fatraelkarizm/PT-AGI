@@ -15,6 +15,9 @@ import {
      STIEAmbarukmo,
      PoliteknikAmbon,
      PoliteknikNest,
+     STIEPari,
+     UnivDarulUlum,
+     SMKN1Maros,
 } from "@/assets";
 
 const GERMAN_PARTNERS = [
@@ -33,6 +36,9 @@ const INDO_PARTNERS = [
      SMKN2Gowa,
      SMKN3Gowa,
      STIEAmbarukmo,
+     STIEPari,
+     UnivDarulUlum,
+     SMKN1Maros,
 ];
 
 export default function PartnerMarquee() {
