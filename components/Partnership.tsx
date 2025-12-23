@@ -124,7 +124,7 @@ export default function Partnership() {
                                    transition={{ delay: 0.1 }}
                                    className="text-4xl md:text-5xl font-bold text-[#021231] leading-tight"
                               >
-                                   Mitra Pendidikan 
+                                   Mitra Pendidikan
                                    <span className="text-transparent bg-clip-text bg-linear-to-r from-[#CD1E1A] to-[#CD1E1A]"> Masa Depan</span>
                               </motion.h2>
                          </div>
@@ -211,8 +211,8 @@ export default function Partnership() {
                                                             {content.ctaText} <ArrowRight size={20} />
                                                        </button>
                                                   </Link>
-                                                  <Link href="/contact" className="w-full sm:w-auto">
-                                                       <button className="w-full sm:w-auto bg-white border border-gray-200 hover:bg-gray-50 text-[#021231] px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-all">
+                                                  <Link href="https://wa.me/6285129791635?text=Halo%20Admin%20PT%20AGI,%20saya%20ingin%20konsultasi" target="_blank" className="w-full sm:w-auto">
+                                                       <button className="w-full sm:w-auto bg-white border border-gray-200 hover:bg-gray-50 text-[#021231] px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-all" aria-description="Konsultasi Gratis">
                                                             Konsultasi Gratis
                                                        </button>
                                                   </Link>

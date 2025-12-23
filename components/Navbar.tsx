@@ -152,6 +152,7 @@ export default function Navbar() {
                                    whileHover={{ scale: 1.05 }}
                                    whileTap={{ scale: 0.95 }}
                                    className="bg-[#CD1E1A] text-white px-6 py-2.5 rounded-full font-semibold shadow-lg hover:shadow-red-500/30 transition-shadow"
+                                   aria-description="Konsultasi Gratis"
                               >
                                    Konsultasi Gratis
                               </motion.button>
@@ -232,6 +233,7 @@ export default function Navbar() {
                                         href="https://wa.me/6282342756169?text=Halo%20Admin%20PT%20AGI,%20saya%20ingin%20konsultasi"
                                         target="_blank"
                                         className="block w-full"
+                                        aria-description="Konsultasi Gratis"
                                    >
                                         <button className="bg-[#CD1E1A] text-white w-full py-3 rounded-xl font-bold mt-4">
                                              Konsultasi Gratis

@@ -93,6 +93,7 @@ export default function Hero() {
                                              whileHover={{ scale: 1.02 }}
                                              whileTap={{ scale: 0.98 }}
                                              className="w-full px-8 py-4 bg-[#CD1E1A] text-white rounded-xl font-bold text-lg shadow-lg hover:bg-red-700 transition-colors flex items-center justify-center gap-2"
+                                             aria-description="Konsultasi Gratis"
                                         >
                                              Konsultasi Gratis
                                              <ArrowRight className="w-5 h-5" />
