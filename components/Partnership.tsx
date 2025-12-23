@@ -227,6 +227,7 @@ export default function Partnership() {
                                                   alt={content.label}
                                                   fill
                                                   className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                                  sizes="(max-width: 768px) 100vw, 50vw"
                                              />
                                              <div className="absolute inset-0 bg-linear-to-t from-white/95 via-white/80 to-transparent md:bg-linear-to-l md:via-white/60 md:to-transparent" />
                                              <div className="absolute inset-0 bg-[#021231]/5" />
