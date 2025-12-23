@@ -6,24 +6,27 @@ import { CheckCircle, GraduationCap, Users, BookOpen, Award, Rocket, School } fr
 import { VocationalSchool } from "@/assets";
 
 import PartnerCollage from "@/components/PartnerCollage";
-import { SMKN2Gowa, SMKN3Gowa } from "@/assets/school";
+import { SMKN2Gowa, SMKN3Gowa, SMKN1Maros } from "@/assets/school";
+import ProgramCTA from "@/components/ProgramCTA";
 
 const SEKOLAH_PARTNERS = [
      {
           id: 1,
           image: SMKN2Gowa,
           label: "SMKN 2 Gowa",
-          rotation: -5,
-          position: { top: "15%", left: "10%" }
      },
      {
           id: 2,
           image: SMKN3Gowa,
           label: "SMKN 3 Gowa",
-          rotation: 4,
-          position: { top: "20%", right: "10%" }
+     },
+     {
+          id: 3,
+          image: SMKN1Maros,
+          label: "SMKN 1 Maros",
      }
 ];
+
 
 export default function SekolahContent() {
      return (
@@ -78,12 +81,13 @@ export default function SekolahContent() {
                               </div>
                          </div>
 
-                         {/* Collage Section for Sekolah - Moved after feature grid */}
+                         {/* Collage Section for Sekolah */}
                          <div className="mb-16 -mx-4 md:mx-0">
                               <PartnerCollage
                                    title="Sekolah"
                                    items={SEKOLAH_PARTNERS}
                                    subtitle="Membuka gerbang karier internasional bagi siswa SMK & SMA Indonesia."
+                                   maxColumns={2}
                               />
                          </div>
 
@@ -111,18 +115,12 @@ export default function SekolahContent() {
                               </ul>
                          </div>
 
-                         <div className="mt-12 p-8 md:p-12 bg-[#021231] rounded-3xl text-white text-center relative overflow-hidden">
-                              <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 opacity-10 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2" />
-                              <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#CD1E1A] opacity-10 blur-3xl rounded-full translate-y-1/2 -translate-x-1/2" />
-
-                              <h2 className="text-2xl md:text-3xl font-bold mb-4 relative z-10">Jadikan Sekolah Anda Unggulan</h2>
-                              <p className="text-gray-300 mb-8 max-w-2xl mx-auto relative z-10">
-                                   Berikan nilai tambah yang nyata bagi siswa dan orang tua. Hubungi kami untuk presentasi program di sekolah Anda.
-                              </p>
-                              <button className="px-8 py-4 bg-[#CD1E1A] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-red-600/50 transition-all hover:scale-105 relative z-10">
-                                   Hubungi Tim Kemitraan
-                              </button>
-                         </div>
+                         <ProgramCTA
+                              title="Jadikan Sekolah Anda Unggulan"
+                              description="Berikan nilai tambah yang nyata bagi siswa dan orang tua. Hubungi kami untuk presentasi program di sekolah Anda."
+                              buttonText="Hubungi Tim Kemitraan"
+                              href="https://wa.me/6285129791635?text=Halo%20Admin%20PT%20AGI,%20saya%20tertarik%20kerjasama%20sekolah"
+                         />
                     </motion.div>
                </div>
           </main>

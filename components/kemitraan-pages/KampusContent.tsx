@@ -7,29 +7,34 @@ import { GlobalUniversity } from "@/assets";
 
 
 import PartnerCollage from "@/components/PartnerCollage";
-import { PoliteknikAmbon, PoliteknikNest, STIEAmbarukmo } from "@/assets/school";
+import { PoliteknikAmbon, PoliteknikNest, STIEAmbarukmo, STIEPari, UnivDarulUlum } from "@/assets/school";
+import ProgramCTA from "@/components/ProgramCTA";
 
 const KAMPUS_PARTNERS = [
      {
           id: 1,
           image: PoliteknikAmbon,
           label: "Politeknik Ambon",
-          rotation: -6,
-          position: { top: "10%", left: "5%" }
      },
      {
           id: 2,
           image: STIEAmbarukmo,
           label: "STIE Ambarukmo",
-          rotation: -3,
-          position: { top: "25%", right: "5%" }
      },
      {
           id: 3,
           image: PoliteknikNest,
           label: "Politeknik Nest",
-          rotation: 4,
-          position: { bottom: "15%", left: "15%" }
+     },
+     {
+          id: 4,
+          image: STIEPari,
+          label: "STIE Pariwisata",
+     },
+     {
+          id: 5,
+          image: UnivDarulUlum,
+          label: "Univ. Darul Ulum",
      }
 ];
 
@@ -87,12 +92,13 @@ export default function KampusContent() {
                               </div>
                          </div>
 
-                         {/* Collage Section for Campus - Moved after feature grid */}
+                         {/* Collage Section for Campus */}
                          <div className="mb-16 -mx-4 md:mx-0">
                               <PartnerCollage
                                    title="Kampus"
                                    items={KAMPUS_PARTNERS}
                                    subtitle="Kolaborasi strategis untuk mencetak lulusan berdaya saing global."
+                                   maxColumns={3}
                               />
                          </div>
 
@@ -120,18 +126,12 @@ export default function KampusContent() {
                               </ul>
                          </div>
 
-                         <div className="mt-12 p-8 md:p-12 bg-[#021231] rounded-3xl text-white text-center relative overflow-hidden">
-                              <div className="absolute top-0 right-0 w-64 h-64 bg-[#CD1E1A] opacity-10 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2" />
-                              <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 opacity-10 blur-3xl rounded-full translate-y-1/2 -translate-x-1/2" />
-
-                              <h2 className="text-2xl md:text-3xl font-bold mb-4 relative z-10">Tingkatkan Akreditasi Kampus Anda</h2>
-                              <p className="text-gray-300 mb-8 max-w-2xl mx-auto relative z-10">
-                                   Jadilah pelopor kampus berwawasan global. Diskusikan bentuk kerjasama yang paling sesuai untuk institusi Anda bersama tim ahli kami.
-                              </p>
-                              <button className="px-8 py-4 bg-[#CD1E1A] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-red-600/50 transition-all hover:scale-105 relative z-10">
-                                   Ajukan Kerjasama Sekarang
-                              </button>
-                         </div>
+                         <ProgramCTA
+                              title="Tingkatkan Akreditasi Kampus Anda"
+                              description="Jadilah pelopor kampus berwawasan global. Diskusikan bentuk kerjasama yang paling sesuai untuk institusi Anda bersama tim ahli kami."
+                              buttonText="Ajukan Kerjasama Sekarang"
+                              href="https://wa.me/6285129791635?text=Halo%20Admin%20PT%20AGI,%20saya%20tertarik%20kerjasama%20kampus"
+                         />
                     </motion.div>
                </div>
           </main>
