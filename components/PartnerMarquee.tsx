@@ -167,8 +167,8 @@ function Marquee({
                                    alt="Partner Logo"
                                    fill
                                    className="object-contain"
-                                   sizes="150px"
-                                   unoptimized // Added to prevent optimization issues with many small images if needed, but removed for now as next/image handles it. Wait, I'll stick to standard props.
+                                   sizes="120px"
+                                   quality={50}
                               />
                          </div>
                     ))}

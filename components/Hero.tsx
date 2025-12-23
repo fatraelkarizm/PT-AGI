@@ -33,7 +33,7 @@ export default function Hero() {
                opacity: 1,
                scale: 1,
                rotate: 0,
-               transition: { duration: 1, ease: "easeOut", delay: 0.5 }
+               transition: { duration: 1, ease: "easeOut", delay: 0.1 }
           }
      };
 
@@ -43,7 +43,7 @@ export default function Hero() {
                opacity: 1,
                scale: 1,
                x: 0,
-               transition: { duration: 0.5, delay: 1 }
+               transition: { duration: 0.5, delay: 0.3 }
           }
      };
 
