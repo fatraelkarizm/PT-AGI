@@ -207,14 +207,14 @@ export default function Partnership() {
 
                                              <div className="flex flex-col sm:flex-row gap-4">
                                                   <Link href={content.ctaLink} className="w-full sm:w-auto">
-                                                       <button className="w-full sm:w-auto bg-[#CD1E1A] hover:bg-[#A31612] text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 shadow-lg hover:shadow-red-900/20 transition-all">
+                                                       <div className="w-full sm:w-auto bg-[#CD1E1A] hover:bg-[#A31612] text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 shadow-lg hover:shadow-red-900/20 transition-all cursor-pointer">
                                                             {content.ctaText} <ArrowRight size={20} />
-                                                       </button>
+                                                       </div>
                                                   </Link>
                                                   <Link href="https://wa.me/6285129791635?text=Halo%20Admin%20PT%20AGI,%20saya%20ingin%20konsultasi" target="_blank" className="w-full sm:w-auto">
-                                                       <button className="w-full sm:w-auto bg-white border border-gray-200 hover:bg-gray-50 text-[#021231] px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-all" aria-description="Konsultasi Gratis">
+                                                       <div className="w-full sm:w-auto bg-white border border-gray-200 hover:bg-gray-50 text-[#021231] px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-all cursor-pointer" aria-description="Konsultasi Gratis">
                                                             Konsultasi Gratis
-                                                       </button>
+                                                       </div>
                                                   </Link>
                                              </div>
                                         </div>
@@ -280,8 +280,8 @@ export default function Partnership() {
 function AwardBadge() {
      return (
           <div className="flex items-center gap-2">
-               <div className="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center text-white font-bold text-[10px]">#1</div>
-               <span className="font-bold text-gray-400">Trusted Agency</span>
+               <div className="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center text-[#021231] font-bold text-[10px]">#1</div>
+               <span className="font-bold text-gray-600">Trusted Agency</span>
           </div>
      )
 }

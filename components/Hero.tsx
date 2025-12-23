@@ -89,15 +89,15 @@ export default function Hero() {
                                    className="relative z-10 flex flex-col sm:flex-row items-center justify-start gap-4"
                               >
                                    <Link href="https://wa.me/6285129791635?text=Halo%20Admin%20PT%20AGI,%20saya%20ingin%20konsultasi" target="_blank" className="w-full sm:w-auto">
-                                        <motion.button
+                                        <motion.div
                                              whileHover={{ scale: 1.02 }}
                                              whileTap={{ scale: 0.98 }}
-                                             className="w-full px-8 py-4 bg-[#CD1E1A] text-white rounded-xl font-bold text-lg shadow-lg hover:bg-red-700 transition-colors flex items-center justify-center gap-2"
+                                             className="w-full px-8 py-4 bg-[#CD1E1A] text-white rounded-xl font-bold text-lg shadow-lg hover:bg-red-700 transition-colors flex items-center justify-center gap-2 cursor-pointer"
                                              aria-description="Konsultasi Gratis"
                                         >
                                              Konsultasi Gratis
                                              <ArrowRight className="w-5 h-5" />
-                                        </motion.button>
+                                        </motion.div>
                                    </Link>
                                    <motion.button
                                         whileHover={{ scale: 1.02 }}

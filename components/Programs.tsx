@@ -59,9 +59,9 @@ export default function Programs() {
 
                     {/* Business Partners */}
                     <div className="mb-24 text-center">
-                         <h3 className="text-xl font-bold tracking-widest text-[#CD1E1A] uppercase mb-8">
+                         <h2 className="text-xl font-bold tracking-widest text-[#CD1E1A] uppercase mb-8">
                               Didukung Oleh Mitra Terpercaya
-                         </h3>
+                         </h2>
                          <PartnerMarquee />
                     </div>
 
