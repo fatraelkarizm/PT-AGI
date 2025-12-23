@@ -130,7 +130,7 @@ export default function KampusContent() {
                               title="Tingkatkan Akreditasi Kampus Anda"
                               description="Jadilah pelopor kampus berwawasan global. Diskusikan bentuk kerjasama yang paling sesuai untuk institusi Anda bersama tim ahli kami."
                               buttonText="Ajukan Kerjasama Sekarang"
-                              href="https://wa.me/6285129791635?text=Halo%20Admin%20PT%20AGI,%20saya%20tertarik%20kerjasama%20kampus"
+                              href="https://wa.me/6282342756169?text=Halo%20Admin%20PT%20AGI,%20saya%20tertarik%20kerjasama%20kampus"
                          />
                     </motion.div>
                </div>

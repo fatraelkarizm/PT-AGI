@@ -119,7 +119,7 @@ export default function SekolahContent() {
                               title="Jadikan Sekolah Anda Unggulan"
                               description="Berikan nilai tambah yang nyata bagi siswa dan orang tua. Hubungi kami untuk presentasi program di sekolah Anda."
                               buttonText="Hubungi Tim Kemitraan"
-                              href="https://wa.me/6285129791635?text=Halo%20Admin%20PT%20AGI,%20saya%20tertarik%20kerjasama%20sekolah"
+                              href="https://wa.me/6282342756169?text=Halo%20Admin%20PT%20AGI,%20saya%20tertarik%20dengan%20program%20Studi%Vokasi"
                          />
                     </motion.div>
                </div>
