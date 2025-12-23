@@ -10,6 +10,24 @@ import {
      FairPair,
      MultiKultur,
      Zubke,
+     AgentAupair,
+     AleduSprache,
+     ApituGoExplore,
+     AupairBerlinde,
+     AupariClick,
+     AupairConnect,
+     AupairConnexion,
+     AupairOffice,
+     AupairSociety,
+     AupairVermittlung,
+     AzubiSolution,
+     BeriGermany,
+     EuropairService,
+     FeeRevee,
+     Kulturist,
+     LesEnfants,
+     PmeFamilien,
+     SolutionEt,
      SMKN2Gowa,
      SMKN3Gowa,
      STIEAmbarukmo,
@@ -28,6 +46,24 @@ const GERMAN_PARTNERS = [
      FairPair,
      MultiKultur,
      Zubke,
+     AgentAupair,
+     AleduSprache,
+     ApituGoExplore,
+     AupairBerlinde,
+     AupariClick,
+     AupairConnect,
+     AupairConnexion,
+     AupairOffice,
+     AupairSociety,
+     AupairVermittlung,
+     AzubiSolution,
+     BeriGermany,
+     EuropairService,
+     FeeRevee,
+     Kulturist,
+     LesEnfants,
+     PmeFamilien,
+     SolutionEt,
 ];
 
 const INDO_PARTNERS = [
@@ -50,7 +86,7 @@ export default function PartnerMarquee() {
                          <div className="flex items-center gap-3">
                               <Image
                                    src="https://flagcdn.com/w80/de.png"
-                                   alt="Agentur Taunus"
+                                   alt="German Flag"
                                    width={24}
                                    height={24}
                               />
@@ -65,7 +101,7 @@ export default function PartnerMarquee() {
                          </div>
                     </div>
                     <div className="w-full h-px bg-gray-100"></div>
-                    <Marquee items={GERMAN_PARTNERS} speed={30} />
+                    <Marquee items={GERMAN_PARTNERS} speed={100} />
                </div>
 
                {/* Indo Partners */}
@@ -74,7 +110,7 @@ export default function PartnerMarquee() {
                          <div className="flex items-center gap-3">
                               <Image
                                    src="https://flagcdn.com/w80/id.png"
-                                   alt="Agentur Taunus"
+                                   alt="Indonesian Flag"
                                    width={24}
                                    height={24}
                               />
@@ -132,6 +168,7 @@ function Marquee({
                                    fill
                                    className="object-contain"
                                    sizes="150px"
+                                   unoptimized // Added to prevent optimization issues with many small images if needed, but removed for now as next/image handles it. Wait, I'll stick to standard props.
                               />
                          </div>
                     ))}
