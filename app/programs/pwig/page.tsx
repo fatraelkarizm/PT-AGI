@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle, Clock, MapPin, DollarSign, FileText, Languages, Video, Plane } from "lucide-react";
 import ProgramCTA from "@/components/ProgramCTA";
+import { TeamDoctor } from "@/assets";
 
 export default function PWIGPage() {
      const steps = [
@@ -44,14 +45,15 @@ export default function PWIGPage() {
                               <h1 className="text-4xl md:text-5xl font-bold text-[#021231] mb-6">
                                    Professional Worker in Germany (PWIG)
                               </h1>
-                              <p className="text-xl text-gray-600 leading-relaxed">
-                                   Peluang karier bagi tenaga ahli berpengalaman. Salurkan keahlian Anda ke pasar kerja Jerman yang membutuhkan tenaga profesional terampil.
+                              <p className="text-xl text-gray-600 leading-relaxed text-justify">
+                                   Professional Worker in Germany adalah program penempatan kerja internasional bagi tenaga kerja profesional dan lulusan siap kerja untuk dapat bekerja secara legal di Jerman sesuai dengan bidang dan kompetensinya.
+
                               </p>
                          </div>
 
                          <div className="aspect-video relative rounded-3xl overflow-hidden shadow-2xl mb-12">
                               <Image
-                                   src="/team-doctor.jpg"
+                                   src={TeamDoctor}
                                    alt="Professional Workers"
                                    fill
                                    className="object-cover"
@@ -78,8 +80,9 @@ export default function PWIGPage() {
 
                          <div className="prose prose-lg max-w-none text-gray-700">
                               <h2 className="text-2xl font-bold text-[#021231] mb-4">Deskripsi Program</h2>
-                              <p className="mb-4">
-                                   PWIG membuka peluang bagi tenaga kesehatan berpengalaman untuk berkarier di Jerman melalui jalur penyetaraan ijazah (Anerkennung).
+                              <p className="mb-4 text-justify">
+                                   Program ini dimulai dengan persiapan bahasa Jerman di Indonesia, dilanjutkan dengan proses administrasi dan penempatan kerja di Jerman. Peserta akan langsung memasuki dunia kerja profesional di perusahaan Jerman, dengan kontrak kerja resmi, sistem ketenagakerjaan yang jelas, serta peluang pengembangan karir jangka panjang.
+
                               </p>
                               <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
                                    <p className="font-bold text-blue-900 mb-2">Target Peserta:</p>

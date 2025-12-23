@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { generateMetadata as generateSEOMetadata } from "@/lib/seo";
 import SekolahContent from "@/components/kemitraan-pages/SekolahContent";
+import { VocationalSchool } from "@/assets";
 
 export const metadata: Metadata = generateSEOMetadata({
      title: "Mitra Sekolah (SMA/SMK) | PT AGI",
@@ -14,7 +15,7 @@ export const metadata: Metadata = generateSEOMetadata({
           "bmi jerman"
      ],
      canonical: "/kemitraan/sekolah",
-     ogImage: "/Vocational-School.png",
+     ogImage: VocationalSchool.src,
 });
 
 export default function SekolahPage() {

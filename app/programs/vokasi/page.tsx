@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle, Clock, MapPin, Briefcase, ClipboardList, Languages, FileCheck, Plane } from "lucide-react";
 import ProgramCTA from "@/components/ProgramCTA";
+import { HotelPria } from "@/assets";
 
 export default function VokasiPage() {
      const steps = [
@@ -44,14 +45,14 @@ export default function VokasiPage() {
                               <h1 className="text-4xl md:text-5xl font-bold text-[#021231] mb-6">
                                    Studi Vokasi & Training Industri
                               </h1>
-                              <p className="text-xl text-gray-600 leading-relaxed">
-                                   Program Ausbildung (Vokasi) di bidang Gastronomi yang terintegrasi. Fokus bagi siswa SMA/SMK dan Mahasiswa untuk siap kerja di industri hospitality.
+                              <p className="text-xl text-gray-600 leading-relaxed text-justify">
+                                   Studi Vokasi & Training Industri di Jerman adalah program pendidikan dan pelatihan berbasis praktik bagi peserta untuk memperoleh keterampilan kerja, pengalaman industri, dan kesiapan profesional melalui sistem vokasi dan training langsung di Jerman yaitu 2 hari teori dan 3 hari praktek.
                               </p>
                          </div>
 
                          <div className="aspect-video relative rounded-3xl overflow-hidden shadow-2xl mb-12">
                               <Image
-                                   src="/hotel-pria.jpg"
+                                   src={HotelPria}
                                    alt="Vocational Training Gastronomy"
                                    fill
                                    className="object-cover"
@@ -78,7 +79,7 @@ export default function VokasiPage() {
 
                          <div className="prose prose-lg max-w-none text-gray-700">
                               <h2 className="text-2xl font-bold text-[#021231] mb-4">Tentang Program</h2>
-                              <p className="mb-6">
+                              <p className="mb-6 text-justify">
                                    Program ini merupakan jembatan emas bagi lulusan SMA, SMK, maupun mahasiswa aktif yang ingin terjun ke dunia profesional bidang Gastronomi.
                                    Dengan kurikulum Ausbildung, peserta akan dibekali keterampilan praktis yang sesuai dengan standar industri internasional.
                               </p>

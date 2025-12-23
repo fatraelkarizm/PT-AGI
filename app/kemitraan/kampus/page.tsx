@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { generateMetadata as generateSEOMetadata } from "@/lib/seo";
 import KampusContent from "@/components/kemitraan-pages/KampusContent";
+import { GlobalUniversity } from "@/assets";
 
 export const metadata: Metadata = generateSEOMetadata({
      title: "Mitra Kampus (Universitas) | PT AGI",
@@ -14,7 +15,7 @@ export const metadata: Metadata = generateSEOMetadata({
           "link and match internasional"
      ],
      canonical: "/kemitraan/kampus",
-     ogImage: "/Global-University.png",
+     ogImage: GlobalUniversity.src,
 });
 
 export default function CampusPage() {

@@ -6,25 +6,21 @@ import { CheckCircle, GraduationCap, Users, BookOpen, Award, Rocket, School } fr
 import { VocationalSchool } from "@/assets";
 
 import PartnerCollage from "@/components/PartnerCollage";
-import { SMKN2Gowa, SMKN3Gowa, SMKN1Maros } from "@/assets/school";
+import { SMKN2Gowa, SMKN3Gowa, SMKN1Maros, AlumniBudiLuhur, AlfatihBandung } from "@/assets/school";
 import ProgramCTA from "@/components/ProgramCTA";
 
 const SEKOLAH_PARTNERS = [
      {
           id: 1,
-          image: SMKN2Gowa,
-          label: "SMKN 2 Gowa",
+          image: AlumniBudiLuhur,
+          label: "Alumni Budi Luhur",
      },
      {
           id: 2,
-          image: SMKN3Gowa,
-          label: "SMKN 3 Gowa",
+          image: AlfatihBandung,
+          label: "Alumni Alfatih Bandung",
      },
-     {
-          id: 3,
-          image: SMKN1Maros,
-          label: "SMKN 1 Maros",
-     }
+
 ];
 
 

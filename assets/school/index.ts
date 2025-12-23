@@ -6,6 +6,8 @@ import PoliteknikAmbon from "./politeknik-ambon.webp";
 import PoliteknikNest from "./politeknik-nest.webp";
 import STIEPari from "./STIE-Pari.webp";
 import UnivDarulUlum from "./Univ-DarulUlum.webp";
+import AlfatihBandung from "./alfatih-bandung.webp";
+import AlumniBudiLuhur from "./alumni-budi-luhur.webp";
 
 export {
      SMKN2Gowa,
@@ -16,4 +18,6 @@ export {
      STIEPari,
      UnivDarulUlum,
      SMKN1Maros,
+     AlfatihBandung,
+     AlumniBudiLuhur,
 };

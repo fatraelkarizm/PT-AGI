@@ -17,25 +17,25 @@ import {
 const PROGRAMS = [
      {
           title: "Fast Track to Career (FTTC)",
-          description: "Program intensif persiapan bahasa dan budaya Jerman untuk studi dan karier.",
+          description: "Program jalur percepatan karier internasional bagi mahasiswa dan alumni D3/S1 Keperawatan serta S1 Kebidanan untuk membangun karier profesional di Jerman secara legal dan terarah.",
           image: Nurse,
           link: "/programs/fttc"
      },
      {
           title: "Professional Worker in Germany",
-          description: "Peluang pelatihan vokasi (Ausbildung) dan kerja paruh waktu di Jerman.",
+          description: "Professional Worker in Germany adalah program penempatan kerja internasional bagi tenaga kerja profesional dan lulusan siap kerja.",
           image: TeamDoctor,
           link: "/programs/pwig"
      },
      {
           title: "Studi Vokasi & Training Industri",
-          description: "Program pendidikan vokasi berkualitas dengan beasiswa di China.",
+          description: "Studi Vokasi & Training Industri di Jerman adalah program pendidikan dan pelatihan berbasis praktik bagi peserta.",
           image: HotelPria,
           link: "/programs/vokasi"
      },
      {
           title: "Culture Exchange",
-          description: "Pertukaran budaya ke USA dan Belgia untuk pengalaman internasional.",
+          description: "Pertukaran budaya ke USA, Belgia, dan China untuk pengalaman internasional.",
           image: CulturalExchange,
           link: "/programs/exchange"
      }

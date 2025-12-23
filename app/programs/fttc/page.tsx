@@ -47,7 +47,7 @@ export default function FTTCPage() {
                                    Fast Track to Career (FTTC)
                               </h1>
                               <p className="text-xl text-gray-600 leading-relaxed">
-                                   Jalur percepatan karier internasional Anda. Persiapkan bahasa, budaya, dan kompetensi teknis hanya dalam 6-12 bulan untuk siap bekerja di Jerman.
+                                   Fast Track to Career (FTTC) adalah program jalur percepatan karier internasional bagi mahasiswa dan alumni D3/S1 Keperawatan serta S1 Kebidanan untuk membangun karier profesional di Jerman secara legal dan terarah.
                               </p>
                          </div>
 
@@ -81,7 +81,8 @@ export default function FTTCPage() {
                          <div className="prose prose-lg max-w-none text-gray-700">
                               <h2 className="text-2xl font-bold text-[#021231] mb-4">Tentang Program</h2>
                               <p className="mb-6">
-                                   Program FTTC dirancang khusus untuk lulusan SMA/SMK/S1 yang ingin melanjutkan karier di Jerman tanpa harus melalui proses kuliah yang panjang. Kami fokus pada *Vocational Training* (Ausbildung) dan *Direct Hiring* untuk tenaga profesional.
+                                   Program dimulai dengan pelatihan bahasa Jerman hingga level A2 di Indonesia, dilanjutkan Au Pair selama 12 bulan sebagai fase adaptasi bahasa dan budaya. Mulai bulan ke-13, peserta melanjutkan karier sebagai perawat di Jerman, dengan jalur yang telah dipersiapkan sejak awal dan berkelanjutan.
+
                               </p>
                          </div>
 
