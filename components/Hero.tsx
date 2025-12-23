@@ -4,7 +4,7 @@ import { motion, Variants } from "framer-motion";
 import { ArrowRight, Globe, CheckCircle, GraduationCap, Briefcase } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { AGIModel } from "@/assets";
+import { ModelAGI } from "@/assets";
 
 export default function Hero() {
      const containerVariants = {
@@ -28,12 +28,12 @@ export default function Hero() {
      };
 
      const imageVariants: Variants = {
-          hidden: { opacity: 0, scale: 0.9, rotate: -5 },
+          hidden: { opacity: 1, scale: 1, rotate: 0 },
           visible: {
                opacity: 1,
                scale: 1,
                rotate: 0,
-               transition: { duration: 1, ease: "easeOut", delay: 0.1 }
+               transition: { duration: 0 }
           }
      };
 
@@ -191,7 +191,7 @@ export default function Hero() {
                                    {/* Image - Adjusted Size */}
                                    <div className="relative z-10 w-full h-full flex items-end justify-center overflow-hidden rounded-4xl pt-12">
                                         <Image
-                                             src={AGIModel}
+                                             src={ModelAGI}
                                              alt="PT AGI Students"
                                              width={600}
                                              height={800}

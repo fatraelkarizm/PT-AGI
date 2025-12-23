@@ -66,6 +66,7 @@ export default function KampusContent() {
                                    alt="Partnership Kampus"
                                    fill
                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                   sizes="(max-width: 1024px) 100vw, 1024px"
                               />
                               <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
                               <div className="absolute bottom-6 left-6 text-white">

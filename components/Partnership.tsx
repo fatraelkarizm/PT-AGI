@@ -281,7 +281,7 @@ function AwardBadge() {
      return (
           <div className="flex items-center gap-2">
                <div className="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center text-[#021231] font-bold text-[10px]">#1</div>
-               <span className="font-bold text-gray-600">Trusted Agency</span>
+               <span className="font-bold text-gray-800">Trusted Agency</span>
           </div>
      )
 }

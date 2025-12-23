@@ -39,7 +39,7 @@ export default function Contact() {
                                              <MapPin className="w-6 h-6 text-white" />
                                         </div>
                                         <div>
-                                             <h4 className="font-bold text-lg mb-1">Kantor Pusat</h4>
+                                             <h3 className="font-bold text-lg mb-1">Kantor Pusat</h3>
                                              <p className="text-gray-400 group-hover:text-white transition-colors">
                                                   Jl. Gajah No 83, Cimahi Selatan, Bandung, 40531
                                              </p>
@@ -51,7 +51,7 @@ export default function Contact() {
                                              <Mail className="w-6 h-6 text-white" />
                                         </div>
                                         <div>
-                                             <h4 className="font-bold text-lg mb-1">Email</h4>
+                                             <h3 className="font-bold text-lg mb-1">Email</h3>
                                              <p className="text-gray-400 group-hover:text-white transition-colors">
                                                   ptagi46@gmail.com
                                              </p>
@@ -63,7 +63,7 @@ export default function Contact() {
                                              <Phone className="w-6 h-6 text-white" />
                                         </div>
                                         <div>
-                                             <h4 className="font-bold text-lg mb-1">WhatsApp</h4>
+                                             <h3 className="font-bold text-lg mb-1">WhatsApp</h3>
                                              <p className="text-gray-400 group-hover:text-white transition-colors">
                                                   +62 823-4275-6169
                                              </p>
