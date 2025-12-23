@@ -1,9 +1,21 @@
 import { Metadata } from "next";
+import { generateMetadata as generateSEOMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateSEOMetadata({
      title: "Studi Vokasi & Training Industri | PT AGI",
-     description: "Program pendidikan dan pelatihan berbasis praktik di Jerman untuk membangun keterampilan kerja, pengalaman industri, dan kesiapan profesional.",
-};
+     description: "Program Ausbildung (Vokasi) Gastronomi di Jerman. Kuliah sambil kerja dengan gaji bulanan, fasilitas tempat tinggal, dan sertifikasi internasional.",
+     keywords: [
+          "ausbildung jerman",
+          "sekolah vokasi jerman",
+          "gastronomi jerman",
+          "beasiswa ausbildung",
+          "kuliah di jerman",
+          "lowongan hotel jerman",
+          "gaji ausbildung"
+     ],
+     canonical: "/programs/vokasi",
+     ogImage: "/hotel-pria.jpg",
+});
 
 export default function VokasiLayout({
      children,

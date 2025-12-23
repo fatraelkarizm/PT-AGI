@@ -4,8 +4,8 @@ export const NAV_LINKS = [
 ];
 
 export const NAV_LINKS_RIGHT = [
-     { label: "FAQ", href: "#faq" },
-     { label: "Kontak", href: "#contact" },
+     { label: "FAQ", href: "/#faq" },
+     { label: "Kontak", href: "/#contact" },
 ];
 
 export const PROGRAMS = [
