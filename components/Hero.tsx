@@ -88,7 +88,7 @@ export default function Hero() {
                                    variants={itemVariants}
                                    className="relative z-10 flex flex-col sm:flex-row items-center justify-start gap-4"
                               >
-                                   <Link href="https://wa.me/6285129791635?text=Halo%20Admin%20PT%20AGI,%20saya%20ingin%20konsultasi" target="_blank" className="w-full sm:w-auto">
+                                   <Link href="https://wa.me/6282342756169?text=Halo%20Admin%20PT%20AGI,%20saya%20ingin%20konsultasi" target="_blank" className="w-full sm:w-auto">
                                         <motion.div
                                              whileHover={{ scale: 1.02 }}
                                              whileTap={{ scale: 0.98 }}

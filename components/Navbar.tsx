@@ -145,7 +145,7 @@ export default function Navbar() {
                     {/* CTA Button */}
                     <div className="hidden lg:block">
                          <Link
-                              href="https://wa.me/6285129791635?text=Halo%20Admin%20PT%20AGI,%20saya%20ingin%20konsultasi"
+                              href="https://wa.me/6282342756169?text=Halo%20Admin%20PT%20AGI,%20saya%20ingin%20konsultasi"
                               target="_blank"
                               className="inline-block"
                          >
@@ -231,7 +231,7 @@ export default function Navbar() {
                                         </Link>
                                    ))}
                                    <Link
-                                        href="https://wa.me/6285129791635?text=Halo%20Admin%20PT%20AGI,%20saya%20ingin%20konsultasi"
+                                        href="https://wa.me/6282342756169?text=Halo%20Admin%20PT%20AGI,%20saya%20ingin%20konsultasi"
                                         target="_blank"
                                         className="block w-full"
                                         aria-description="Konsultasi Gratis"

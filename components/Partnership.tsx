@@ -211,7 +211,7 @@ export default function Partnership() {
                                                             {content.ctaText} <ArrowRight size={20} />
                                                        </div>
                                                   </Link>
-                                                  <Link href="https://wa.me/6285129791635?text=Halo%20Admin%20PT%20AGI,%20saya%20ingin%20konsultasi" target="_blank" className="w-full sm:w-auto">
+                                                  <Link href="https://wa.me/6282342756169?text=Halo%20Admin%20PT%20AGI,%20saya%20ingin%20konsultasi" target="_blank" className="w-full sm:w-auto">
                                                        <div className="w-full sm:w-auto bg-white border border-gray-200 hover:bg-gray-50 text-[#021231] px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-all cursor-pointer" aria-description="Konsultasi Gratis">
                                                             Konsultasi Gratis
                                                        </div>
