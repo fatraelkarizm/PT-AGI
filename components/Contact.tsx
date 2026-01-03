@@ -1,11 +1,35 @@
 "use client";
 
+import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { sendContactEmail } from "@/app/actions/contact";
 
 export default function Contact() {
-     //   const SCRIPT_URL =
-     //     "https://script.google.com/macros/s/AKfycbwT47MzArpQTf4IR9IzJXPx3q_VIVMoxJp3tluYLz1VJUKgsadxXIpk9i0V2u5bLAve9A/exec";
+     const [isSubmitting, setIsSubmitting] = useState(false);
+     const [isSuccess, setIsSuccess] = useState(false);
+     const [error, setError] = useState<string | null>(null);
+
+     async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+          e.preventDefault();
+          setIsSubmitting(true);
+          setError(null);
+
+          const formData = new FormData(e.currentTarget);
+          try {
+               const result = await sendContactEmail(formData);
+               if (result.success) {
+                    setIsSuccess(true);
+               } else {
+                    setError(result.error || "Terjadi kesalahan saat mengirim pesan.");
+               }
+          } catch (err) {
+               setError("Terjadi kesalahan sistem. Silakan coba lagi.");
+          } finally {
+               setIsSubmitting(false);
+          }
+     }
+    
 
      return (
           <section
@@ -83,21 +107,66 @@ export default function Contact() {
                                    Kirim Pesan
                               </h3>
 
-                              {/* ✅ FORM ACTION — NO CORS */}
-                              <form
-                                   className="space-y-4"
-                                   //     action={SCRIPT_URL}
-                                   method="POST"
-                              >
-                                   <div className="grid grid-cols-2 gap-4">
+                              {isSuccess ? (
+                                   <div className="text-center py-12">
+                                        {/* Change the color of the icon to red */}
+                                        <div className="w-20 h-20  bg-red-100 text-[#CD1E1A] rounded-full flex items-center justify-center mx-auto mb-6">
+                                             <Mail className="w-10 h-10" />
+                                        </div>
+                                        <h3 className="text-2xl font-bold text-[#021231] mb-2">
+                                             Pesan Terkirim!
+                                        </h3>
+                                        <p className="text-gray-600 mb-8">
+                                             Terima kasih telah menghubungi kami. Kami akan segera
+                                             membalas pesan Anda.
+                                        </p>
+                                        <button
+                                             onClick={() => setIsSuccess(false)}
+                                             className="px-8 py-3 bg-[#CD1E1A] text-white font-bold rounded-xl shadow-lg hover:bg-red-700 transition-colors"
+                                        >
+                                             Kirim Pesan Lain
+                                        </button>
+                                   </div>
+                              ) : (
+                                   <form
+                                        onSubmit={handleSubmit}
+                                        className="space-y-4"
+                                   >
+                                        <div className="grid grid-cols-2 gap-4">
+                                             <div className="space-y-2">
+                                                  <label className="text-sm font-semibold text-gray-600">
+                                                       Nama Depan
+                                                  </label>
+                                                  <input
+                                                       name="firstName"
+                                                       type="text"
+                                                       placeholder="John"
+                                                       required
+                                                       className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-100 text-[#021231] focus:outline-none focus:ring-2 focus:ring-[#CD1E1A]/20 focus:border-[#CD1E1A]"
+                                                  />
+                                             </div>
+
+                                             <div className="space-y-2">
+                                                  <label className="text-sm font-semibold text-gray-600">
+                                                       Nama Belakang
+                                                  </label>
+                                                  <input
+                                                       name="lastName"
+                                                       type="text"
+                                                       placeholder="Doe"
+                                                       className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-100 text-[#021231] focus:outline-none focus:ring-2 focus:ring-[#CD1E1A]/20 focus:border-[#CD1E1A]"
+                                                  />
+                                             </div>
+                                        </div>
+
                                         <div className="space-y-2">
                                              <label className="text-sm font-semibold text-gray-600">
-                                                  Nama Depan
+                                                  Email
                                              </label>
                                              <input
-                                                  name="firstName"
-                                                  type="text"
-                                                  placeholder="John"
+                                                  name="email"
+                                                  type="email"
+                                                  placeholder="john@example.com"
                                                   required
                                                   className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-100 text-[#021231] focus:outline-none focus:ring-2 focus:ring-[#CD1E1A]/20 focus:border-[#CD1E1A]"
                                              />
@@ -105,50 +174,39 @@ export default function Contact() {
 
                                         <div className="space-y-2">
                                              <label className="text-sm font-semibold text-gray-600">
-                                                  Nama Belakang
+                                                  Pesan
                                              </label>
-                                             <input
-                                                  name="lastName"
-                                                  type="text"
-                                                  placeholder="Doe"
+                                             <textarea
+                                                  name="message"
+                                                  rows={4}
+                                                  placeholder="Tulis pesan Anda di sini..."
+                                                  required
                                                   className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-100 text-[#021231] focus:outline-none focus:ring-2 focus:ring-[#CD1E1A]/20 focus:border-[#CD1E1A]"
-                                             />
+                                             ></textarea>
                                         </div>
-                                   </div>
 
-                                   <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-gray-600">
-                                             Email
-                                        </label>
-                                        <input
-                                             name="email"
-                                             type="email"
-                                             placeholder="john@example.com"
-                                             required
-                                             className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-100 text-[#021231] focus:outline-none focus:ring-2 focus:ring-[#CD1E1A]/20 focus:border-[#CD1E1A]"
-                                        />
-                                   </div>
+                                        {error && (
+                                             <div className="p-4 bg-red-50 text-red-600 rounded-xl text-sm">
+                                                  {error}
+                                             </div>
+                                        )}
 
-                                   <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-gray-600">
-                                             Pesan
-                                        </label>
-                                        <textarea
-                                             name="message"
-                                             rows={4}
-                                             placeholder="Tulis pesan Anda di sini..."
-                                             required
-                                             className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-100 text-[#021231] focus:outline-none focus:ring-2 focus:ring-[#CD1E1A]/20 focus:border-[#CD1E1A]"
-                                        ></textarea>
-                                   </div>
-
-                                   <button
-                                        type="submit"
-                                        className="w-full py-4 bg-[#CD1E1A] text-white font-bold rounded-xl shadow-lg hover:bg-red-700 transition-colors"
-                                   >
-                                        Kirim Pesan
-                                   </button>
-                              </form>
+                                        <button
+                                             type="submit"
+                                             disabled={isSubmitting}
+                                             className="w-full py-4 bg-[#CD1E1A] text-white font-bold rounded-xl shadow-lg hover:bg-red-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2"
+                                        >
+                                             {isSubmitting ? (
+                                                  <>
+                                                       <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                                                       Mengirim...
+                                                  </>
+                                             ) : (
+                                                  "Kirim Pesan"
+                                             )}
+                                        </button>
+                                   </form>
+                              )}
                          </motion.div>
                     </div>
                </div>
