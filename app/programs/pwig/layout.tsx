@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { generateMetadata as generateSEOMetadata } from "@/lib/seo";
+import { TeamDoctor } from "@/assets";
 
 export const metadata: Metadata = generateSEOMetadata({
      title: "Professional Worker in Germany (PWIG) | PT AGI",
@@ -14,7 +15,7 @@ export const metadata: Metadata = generateSEOMetadata({
           "gaji profesional jerman"
      ],
      canonical: "/programs/pwig",
-     ogImage: "/team-doctor.jpg",
+     ogImage: TeamDoctor,
 });
 
 export default function PWIGLayout({

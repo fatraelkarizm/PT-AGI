@@ -1,11 +1,12 @@
 import { Metadata } from "next";
+import { StaticImageData } from "next/image";
 
 export interface SEOProps {
      title: string;
      description: string;
      keywords?: string[];
      canonical?: string;
-     ogImage?: string;
+     ogImage?: string | StaticImageData;
      ogType?: "website" | "article";
      noindex?: boolean;
      author?: string;

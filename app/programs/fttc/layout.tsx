@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { generateMetadata as generateSEOMetadata } from "@/lib/seo";
+import { Nurse } from "@/assets";
 
 export const metadata: Metadata = generateSEOMetadata({
      title: "Fast Track to Career (FTTC) | PT AGI",
@@ -15,7 +16,7 @@ export const metadata: Metadata = generateSEOMetadata({
           "gaji jerman",
      ],
      canonical: "/programs/fttc",
-     ogImage: "/Nurse.jpg",
+     ogImage: Nurse,
 });
 
 export default function FTTCLayout({

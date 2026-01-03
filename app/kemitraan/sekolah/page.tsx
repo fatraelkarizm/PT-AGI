@@ -15,7 +15,7 @@ export const metadata: Metadata = generateSEOMetadata({
           "bmi jerman"
      ],
      canonical: "/kemitraan/sekolah",
-     ogImage: VocationalSchool.src,
+     ogImage: VocationalSchool,
 });
 
 export default function SekolahPage() {

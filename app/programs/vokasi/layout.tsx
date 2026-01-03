@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { generateMetadata as generateSEOMetadata } from "@/lib/seo";
+import { HotelPria } from "@/assets";
 
 export const metadata: Metadata = generateSEOMetadata({
      title: "Studi Vokasi & Training Industri | PT AGI",
@@ -14,7 +15,7 @@ export const metadata: Metadata = generateSEOMetadata({
           "gaji ausbildung"
      ],
      canonical: "/programs/vokasi",
-     ogImage: "/hotel-pria.jpg",
+     ogImage: HotelPria,
 });
 
 export default function VokasiLayout({

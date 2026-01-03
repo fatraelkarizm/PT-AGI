@@ -15,7 +15,7 @@ export const metadata: Metadata = generateSEOMetadata({
           "link and match internasional"
      ],
      canonical: "/kemitraan/kampus",
-     ogImage: GlobalUniversity.src,
+     ogImage: GlobalUniversity,
 });
 
 export default function CampusPage() {
