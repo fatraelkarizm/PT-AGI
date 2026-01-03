@@ -40,5 +40,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
                changeFrequency: "weekly",
                priority: 0.9,
           },
+          {
+               url: `${baseUrl}/kemitraan/kampus`,
+               lastModified: new Date(),
+               changeFrequency: "monthly",
+               priority: 0.9,
+          },
+          {
+               url: `${baseUrl}/kemitraan/sekolah`,
+               lastModified: new Date(),
+               changeFrequency: "monthly",
+               priority: 0.9,
+          },
      ];
 }
