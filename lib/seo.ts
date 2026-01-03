@@ -21,7 +21,7 @@ const SITE_CONFIG = {
      description: "Mitra resmi karier internasional Indonesia. Program studi dan kerja legal ke Jerman, USA, Belgia, dan China.",
      url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.agiindonesia.id",
      logo: AGILogo,
-     ogImage: "/og-image.jpg",
+     ogImage: AGILogo,
      twitterHandle: "@ptagi_official",
      locale: "id_ID",
      localeAlternate: "en_US",
@@ -44,8 +44,9 @@ export function generateMetadata({
           : `${title} | ${SITE_CONFIG.shortName}`;
 
      const fullUrl = canonical ? `${SITE_CONFIG.url}${canonical}` : SITE_CONFIG.url;
-     const imageUrl = ogImage || SITE_CONFIG.ogImage;
-     const fullImageUrl = imageUrl.startsWith("http") ? imageUrl : `${SITE_CONFIG.url}${imageUrl}`;
+     const rawImageUrl = ogImage || SITE_CONFIG.ogImage;
+     const imageUrlString = typeof rawImageUrl === "string" ? rawImageUrl : rawImageUrl.src;
+     const fullImageUrl = imageUrlString.startsWith("http") ? imageUrlString : `${SITE_CONFIG.url}${imageUrlString}`;
 
      const defaultKeywords = [
           "karier internasional",
@@ -157,7 +158,10 @@ export function generateOrganizationSchema() {
           address: {
                "@type": "PostalAddress",
                addressCountry: "ID",
-               addressLocality: "Jakarta",
+               addressLocality: "Cimahi Selatan, Bandung",
+               streetAddress: "Jl. Gajah No 83",
+               postalCode: "40531",
+               addressRegion: "Jawa Barat",
           },
           contactPoint: {
                "@type": "ContactPoint",
