@@ -19,7 +19,7 @@ const SITE_CONFIG = {
      name: "PT Akselerasi Global Indonesia",
      shortName: "PT AGI",
      description: "Mitra resmi karier internasional Indonesia. Program studi dan kerja legal ke Jerman, USA, Belgia, dan China.",
-     url: process.env.NEXT_PUBLIC_SITE_URL || "https://agiindonesia.id",
+     url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.agiindonesia.id",
      logo: AGILogo,
      ogImage: "/og-image.jpg",
      twitterHandle: "@ptagi_official",
