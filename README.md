@@ -1,91 +1,55 @@
-# PT-AGI Corporate Website
+# PT AGI - International Career Landing Page (Work Sample)
 
-![Next.js](https://img.shields.io/badge/Next.js-16.0-black?style=for-the-badge&logo=next.js)
-![React](https://img.shields.io/badge/React-19.2-blue?style=for-the-badge&logo=react)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-007ACC?style=for-the-badge&logo=typescript)
-
-Welcome to the official repository for the **PT-AGI** corporate platform. This web application is built to provide an intuitive, modern, and highly performant experience for our partners, clients, and internal teams. 
+This repository contains a **Work Sample** demonstrating a modern, interactive landing page for **PT AGI**, an organization dedicated to helping individuals build international careers legally. The platform showcases various programs such as "Fast Track to Career (FTTC)", "Professional Worker in Germany (PWIG)", Vocational Studies, and Culture Exchange programs in countries like Germany, the USA, Belgium, and China.
 
 ## 🚀 Overview
 
-PT-AGI is a dynamic platform designed to handle various corporate initiatives, including:
-- **Exchange Programs**: Comprehensive portals for participants.
-- **Partnerships (Kemitraan)**: Dedicated workflows and directories for educational institutions and corporate partners.
-- **Engaging UI/UX**: Utilizing Framer Motion and Radix UI for highly accessible and engaging user interfaces.
+The project is a frontend web application built with a focus on high-quality UI/UX, smooth animations, and responsive design, providing a premium feel for prospective students and professionals.
 
-## 🌟 Key Features
+## ⚠️ Problem Statement
 
-- **SEO Optimized**: Fully optimized structure utilizing Next.js Server-Side Rendering (SSR) and dynamic metadata for robust search engine visibility.
-- **Responsive Design**: Mobile-first architecture crafted with Tailwind CSS for seamless viewing across all devices.
-- **High Performance**: Leveraging React 19 and Next.js App Router for optimal load times and smooth client-side navigation.
-- **Secure Emailing**: Integrated with Nodemailer for secure and reliable communications.
-- **Accessible Components**: Accessible foundational components implemented using Radix UI.
+When building an online presence for international career placement agencies, several challenges arise:
+- **Low Engagement:** Traditional agency websites often look outdated and fail to capture the attention of young, ambitious professionals.
+- **Information Overload:** Presenting multiple complex programs, legalities, and financing options can overwhelm users if not structured properly.
+- **Lack of Trust:** A subpar digital experience can diminish the perceived credibility and legal assurance of the career programs offered.
+- **Static Experience:** Lack of modern micro-interactions makes the browsing experience feel dull.
+
+## 💡 Solution
+
+To address these challenges, this project implements a state-of-the-art landing page with the following solutions:
+- **Premium Aesthetics & Animations:** Integrated **Framer Motion** to deliver smooth entry animations, floating cards, and interactive hover states that immediately elevate the brand's perceived value.
+- **Modern Tech Stack:** Built with **Next.js 15** and **React 19** for optimized performance, SEO readiness, and a seamless single-page application feel.
+- **Responsive & Clean UI:** Utilized **Tailwind CSS v4** to ensure the design adapts perfectly across mobile, tablet, and desktop devices.
+- **Structured Component Architecture:** Separated concerns into reusable components like a sticky `Navbar` with dropdowns and a dynamic `Hero` section to keep the codebase maintainable.
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
-- **Library**: [React 19](https://react.dev/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **UI Components**: [Radix UI](https://www.radix-ui.com/) & [Lucide React](https://lucide.dev/) (Icons)
-- **Utilities**: `clsx`, `tailwind-merge`, `class-variance-authority`
+- **Framework:** Next.js (App Router)
+- **Library:** React
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
 
-## ⚙️ Getting Started
+## 💻 Getting Started
 
-To get a local copy up and running, follow these simple steps.
+First, install the dependencies:
 
-### Prerequisites
-
-Ensure you have [Node.js](https://nodejs.org/) (v20+ recommended) and `npm` installed.
-
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-org/PT-AGI.git
-   cd PT-AGI
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Set up environment variables:**
-   Create a `.env.local` file in the root directory and add the necessary configuration variables.
-
-4. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-
-5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
-
-## 📁 Project Structure
-
-```text
-PT-AGI/
-├── app/               # Next.js App Router (Pages, Layouts, API routes)
-│   ├── kemitraan/     # Partnership portal
-│   ├── programs/      # Exchange programs 
-│   └── ...
-├── components/        # Reusable UI components (e.g., ProgramCTA, PartnerMarquee)
-├── assets/            # Static assets and typed data resources
-├── public/            # Publicly accessible assets
-└── package.json       # Project dependencies and scripts
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
 ```
 
-## 🤝 Contributing
+Then, run the development server:
 
-We welcome contributions! Please ensure you adhere to the project's coding standards.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-1. Create a Feature Branch (`git checkout -b feature/AmazingFeature`)
-2. Commit your Changes (`git commit -m 'feat: add some AmazingFeature'`)
-3. Push to the Branch (`git push origin feature/AmazingFeature`)
-4. Open a Pull Request
-
-## 📄 License
-
-This project is proprietary and confidential. All rights reserved by **PT-AGI**.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
