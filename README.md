@@ -1,34 +1,58 @@
-# PT AGI - International Career Landing Page (Work Sample)
+# PT AGI - Corporate Platform & International Career Landing Page (Work Sample)
 
-This repository contains a **Work Sample** demonstrating a modern, interactive landing page for **PT AGI**, an organization dedicated to helping individuals build international careers legally. The platform showcases various programs such as "Fast Track to Career (FTTC)", "Professional Worker in Germany (PWIG)", Vocational Studies, and Culture Exchange programs in countries like Germany, the USA, Belgium, and China.
+This repository contains a **Work Sample** demonstrating a modern, interactive corporate platform and landing page for **PT AGI**, an organization dedicated to helping individuals build international careers legally. The platform showcases various initiatives including Exchange Programs, Partnerships (Kemitraan), "Fast Track to Career (FTTC)", "Professional Worker in Germany (PWIG)", and Vocational Studies.
 
 ## 🚀 Overview
 
-The project is a frontend web application built with a focus on high-quality UI/UX, smooth animations, and responsive design, providing a premium feel for prospective students and professionals.
+PT-AGI is a dynamic platform designed to handle various corporate initiatives while providing a premium, highly performant experience for our partners, clients, and internal teams. The project is built with a focus on robust SEO, high-quality UI/UX, and smooth animations.
 
 ## ⚠️ Problem Statement
 
-When building an online presence for international career placement agencies, several challenges arise:
-- **Low Engagement:** Traditional agency websites often look outdated and fail to capture the attention of young, ambitious professionals.
-- **Information Overload:** Presenting multiple complex programs, legalities, and financing options can overwhelm users if not structured properly.
-- **Lack of Trust:** A subpar digital experience can diminish the perceived credibility and legal assurance of the career programs offered.
-- **Static Experience:** Lack of modern micro-interactions makes the browsing experience feel dull.
+When building an online presence for an international career placement agency, several key challenges arise:
+- **Need for High Traffic & Visibility:** Without strong SEO and fast page loads, the agency struggles to attract organic website traffic from young, ambitious professionals searching for international opportunities.
+- **Brand Professionalism & Trust:** A subpar, outdated digital experience diminishes the perceived credibility, professionalism, and legal assurance of the career programs offered.
+- **Information Overload:** Presenting multiple complex programs, legalities, and partnership workflows can overwhelm users if not structured cleanly.
+- **Static Experience:** Traditional agency websites often lack modern micro-interactions, making the browsing experience feel dull and failing to capture user attention.
 
 ## 💡 Solution
 
-To address these challenges, this project implements a state-of-the-art landing page with the following solutions:
-- **Premium Aesthetics & Animations:** Integrated **Framer Motion** to deliver smooth entry animations, floating cards, and interactive hover states that immediately elevate the brand's perceived value.
-- **Modern Tech Stack:** Built with **Next.js 15** and **React 19** for optimized performance, SEO readiness, and a seamless single-page application feel.
-- **Responsive & Clean UI:** Utilized **Tailwind CSS v4** to ensure the design adapts perfectly across mobile, tablet, and desktop devices.
-- **Structured Component Architecture:** Separated concerns into reusable components like a sticky `Navbar` with dropdowns and a dynamic `Hero` section to keep the codebase maintainable.
+To address these challenges, this project implements a state-of-the-art corporate platform with the following solutions:
+- **SEO Optimized Architecture:** Fully optimized structure utilizing Next.js Server-Side Rendering (SSR) and dynamic metadata for robust search engine visibility to drive high organic traffic.
+- **Premium Aesthetics & Animations:** Integrated **Framer Motion** to deliver smooth entry animations, floating cards, and interactive hover states that immediately elevate brand professionalism and perceived value.
+- **Accessible & Clean UI:** Utilized **Tailwind CSS v4** and foundational components from **Radix UI** to ensure the design is fully accessible and adapts perfectly across all devices.
+- **Secure Communications:** Integrated with **Nodemailer** for secure emailing to handle partnership inquiries and program registrations efficiently.
+
+## 🌟 Key Features
+
+- **SEO Optimized**: Utilizing Next.js SSR and dynamic metadata for robust search engine visibility.
+- **Responsive Design**: Mobile-first architecture crafted with Tailwind CSS for seamless viewing across all devices.
+- **High Performance**: Leveraging React 19 and Next.js App Router for optimal load times and smooth client-side navigation.
+- **Secure Emailing**: Integrated with Nodemailer for secure and reliable communications.
+- **Accessible Components**: Accessible foundational components implemented using Radix UI.
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Next.js (App Router)
-- **Library:** React
-- **Styling:** Tailwind CSS
-- **Animations:** Framer Motion
-- **Icons:** Lucide React
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Library**: [React 19](https://react.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **UI Components**: [Radix UI](https://www.radix-ui.com/) & [Lucide React](https://lucide.dev/)
+- **Utilities**: `clsx`, `tailwind-merge`
+
+## 📁 Project Structure
+
+```text
+PT-AGI/
+├── app/               # Next.js App Router (Pages, Layouts, API routes)
+│   ├── kemitraan/     # Partnership portal
+│   ├── programs/      # Exchange programs 
+│   └── ...
+├── components/        # Reusable UI components (e.g., ProgramCTA, PartnerMarquee)
+├── assets/            # Static assets and typed data resources
+├── public/            # Publicly accessible assets
+└── package.json       # Project dependencies and scripts
+```
 
 ## 💻 Getting Started
 
